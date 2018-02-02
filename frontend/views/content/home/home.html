@@ -1,0 +1,55 @@
+<main>
+    <section class="main-campus-area">
+        <div class="broadcasting-slider">
+            <flex-slider flex-slide="camp in campusBanner track by $index" animation="slide">
+                <li class="relate">
+                    <img ng-src="{{camp.img}}" alt="Banner Image" class="img-responsive">
+                    <div class="broadcasting-msg-area">
+                        <h2>{{camp.broadcastingMain}}</h2>
+                        <p>{{camp.broadcastingSub}}</p>
+                    </div>
+                </li>
+            </flex-slider>
+        </div>
+        <div class="container">
+            <div class="campus-area section-padding">
+                <div class="campus-section d-flex">
+                    <div class="campus-add mg-rl3 banner-effect1 relate fix">
+                        <a><img src="img/home/campus-one.jpg" class="img-responsive" alt="Goregaon Campus"></a>
+                        <div class="banner-desc">
+                            <div class="d-table text-center">
+                                <div class="d-cell align-middle">
+                                    <div class="text-1">GOREGAON-OGC CAMPUS
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campus-add mg-rl3 banner-effect1 relate fix ">
+                        <a><img src="img/home/campus-second.jpg" class="img-responsive" alt="jvlr Campus"></a>
+                        <div class="banner-desc">
+                            <div class="d-table  text-center">
+                                <div class="d-cell align-middle">
+                                    <div class="text-1">JVLR CAMPUS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article>
+                    <h3>News & Updates</h3>
+                    <div class="news-slider">
+                        <flex-slider flex-slide="newArrival in newArrivals track by $index" animation="slide">
+                            <li>
+                                <div>
+                                    <h2>FREEDOM TO THINK.EMPOWERING TO EXPLORE.</h2>
+                                    <p>TO BRING OUT THE STAR IN YOU</p>
+                                </div>
+                            </li>
+                        </flex-slider>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>

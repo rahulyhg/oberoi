@@ -1,22 +1,5 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
-    $scope.template = TemplateService.getHTML("content/home.html");
-    TemplateService.title = "Home"; //This is the Title of the Website
-    $scope.navigation = NavigationService.getNavigation();
 
-    $scope.submitForm = function (data) {
-        console.log("This is it");
-        return new Promise(function (callback) {
-            $timeout(function () {
-                callback();
-            }, 5000);
-        });
-    };
-
-
-
-})
-
-.controller('LinksCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
     $scope.template = TemplateService.getHTML("content/links.html");
     TemplateService.title = "Links"; // This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();

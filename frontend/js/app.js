@@ -14,12 +14,17 @@ var myApp = angular.module('myApp', [
 ]);
 
 // Define all the routes below
-myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
     var tempateURL = "views/template/template.html"; //Default Template URL
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
+        .state('aboutus', {
+            url: "/aboutus",
+            templateUrl: tempateURL,
+            controller: 'AboutUsCtrl'
+        })
         .state('home', {
             url: "/",
             templateUrl: tempateURL,
@@ -35,7 +40,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
 });
 
 // For Language JS
-myApp.config(function ($translateProvider) {
+myApp.config(function($translateProvider) {
     $translateProvider.translations('en', LanguageEnglish);
     $translateProvider.translations('hi', LanguageHindi);
     $translateProvider.preferredLanguage('en');

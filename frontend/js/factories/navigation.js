@@ -1,22 +1,68 @@
-myApp.factory('NavigationService', function () {
+myApp.factory('NavigationService', function() {
     var navigation = [{
-        name: "Home",
-        classis: "active",
-        anchor: "home",
-        subnav: [{
-            name: "Subnav1",
+            name: "About Us",
             classis: "active",
-            anchor: "home"
-        }]
-    }, {
-        name: "Links",
-        classis: "active",
-        anchor: "links",
-        subnav: []
-    }];
+            anchor: "home",
+            subnav: [{
+                    name: "Our History",
+                    classis: "active",
+                    anchor: "aboutus"
+                }, {
+                    name: "Our Philosophy",
+                    classis: "active",
+                    anchor: "aboutus"
+                },
+                {
+                    name: "Governance",
+                    classis: "active",
+                    anchor: "aboutus"
+                },
+                {
+                    name: "Safety",
+                    classis: "active",
+                    anchor: "about-us"
+                }
+            ]
+        }, {
+            name: "Learning",
+            classis: "active",
+            anchor: "links",
+            subnav: [{
+                name: "Subnav1",
+                classis: "active",
+                anchor: "home"
+            }]
+        },
+        {
+            name: "Admissions",
+            classis: "active",
+            anchor: "links",
+            subnav: [{
+                name: "Subnav1",
+                classis: "active",
+                anchor: "home"
+            }]
+        },
+        {
+            name: "Employment",
+            classis: "active",
+            anchor: "links",
+            subnav: [{
+                name: "Subnav1",
+                classis: "active",
+                anchor: "home"
+            }]
+        },
+        {
+            name: "Contact Us",
+            classis: "active",
+            anchor: "links",
+            subnav: []
+        }
+    ];
 
     return {
-        getNavigation: function () {
+        getNavigation: function() {
             return navigation;
         },
     };
