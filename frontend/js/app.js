@@ -25,6 +25,11 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locati
             templateUrl: tempateURL,
             controller: 'AboutUsCtrl'
         })
+        .state('goregoan-campus', {
+            url: "/goregoan-campus",
+            templateUrl: tempateURL,
+            controller: 'GoregoanCampusCtrl'
+        })
         .state('home', {
             url: "/",
             templateUrl: tempateURL,

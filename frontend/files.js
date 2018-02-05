@@ -48,6 +48,7 @@ module.exports = [
     // Contorllers
     'frontend/js/controllers/controller.js',
     'frontend/views/content/aboutus/aboutus.js',
+    'frontend/views/content/goregoan-campus/goregoan-campus.js',
     'frontend/views/content/home/home.js',
     'frontend/js/controllers/header-controller.js',
     'frontend/js/controllers/language-controller.js',
