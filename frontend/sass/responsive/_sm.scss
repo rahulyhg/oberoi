@@ -1,3 +1,18 @@
  @media (max-width: $screen-sm-max) {
      // Tablet
  }
+ 
+ @media (min-width: 576px) {
+     .list-desc-area .list-desc-img {
+         max-width: 58.333333%;
+         flex: 0 0 58.333333%;
+     }
+     .list-desc-area .list-desc-title {
+         max-width: 41.666667%;
+         -webkit-flex: 0 0 41.666667%;
+         /* Safari 6.1+ */
+         -ms-flex: 0 0 41.666667%;
+         /* IE 10 */
+         flex: 0 0 41.666667%;
+     }
+ }
