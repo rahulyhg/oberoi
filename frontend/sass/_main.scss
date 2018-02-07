@@ -37,6 +37,7 @@ html {
 }
 
 @include font-face("Roboto Black", "../fonts/roboto-black/Roboto-Black-webfont", ("ttf", "woff", "eot"));
+@include font-face("Roboto Bold", "../fonts/roboto-bold/Roboto-Bold-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Light", "../fonts/roboto-light/Roboto-Light-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Regular", "../fonts/roboto-regular/Roboto-Regular-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Thin", "../fonts/roboto-thin/Roboto-Thin-webfont", ("ttf", "woff", "eot"));
@@ -156,12 +157,17 @@ h6 {
     padding: 50px 0;
 }
 
-.padd-bt {
+.padd-bt30 {
     padding-bottom: 30px;
 }
 
-.padd-tp {
+.padd-tp30 {
     padding-top: 30px;
+}
+
+.padd-tb30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .padd15 {
@@ -184,10 +190,6 @@ h6 {
     padding: 0 15px;
 }
 
-.padd-bt25 {
-    padding-bottom: 25px;
-}
-
 .mg-rl3 {
     margin: 0 3px;
 }
@@ -202,6 +204,10 @@ h6 {
 
 .font-black {
     font-family: "Roboto Black", sans-serif;
+}
+
+.font-bold {
+    font-family: "Roboto Bold", sans-serif;
 }
 
 .font-lt {
@@ -222,6 +228,10 @@ h6 {
 
 .font17 {
     font-size: 17px!important;
+}
+
+.font-20 {
+    font-size: 20px!important;
 }
 
 .line-ht {
@@ -286,6 +296,10 @@ a {
 
 a:focus {
     outline: 0px solid
+}
+
+p {
+    font-size: 13px;
 }
 
 //bootstrap forms
@@ -364,9 +378,9 @@ header {
 }
 
 body {
-    padding-top: 85px;
+    padding-top: 84px;
     color: #58595b;
-    font-family: "Roboto Regular", sans-serif;
+    font-family: "Roboto Light", sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -414,8 +428,38 @@ body {
 
 /****************************consistent area(For all pages) ***********************************/
 
+.text-number {
+    font-size: 65px;
+    @extend .font-thin;
+}
+
 .sidenav-list-area {
     width: 20%;
+}
+
+.sidenav-list-area>.sidenav-list>a.list-group-item {
+    padding: 15px 45px;
+    color: #58595b;
+    @extend .font13;
+    &:active {
+        background-color: #fff;
+        color: #509e99;
+    }
+    &:hover {
+        background-color: #509e99;
+        color: white;
+    }
+    &:focus,
+    {
+        background-color: #fff;
+        color: #509e99;
+    }
+}
+
+.sidenav-list-area>.sidenav-list>a.list-group-item:first-child,
+.sidenav-list-area>.sidenav-list>a.list-group-item:last-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .list-desc-area {
@@ -423,6 +467,7 @@ body {
 }
 
 .list-desc-area .list-desc-bg {
+    position: relative;
     @include flex-wrap(wrap);
 }
 
@@ -442,11 +487,53 @@ body {
     background-size: 155px;
 }
 
+.profile .profile-data .profile-data-name {
+    @extend .font13;
+    text-align: center;
+}
+
 
 /****************************about-us-area ***********************************/
 
-.aboutus-main-area .list-desc-area .list-desc-title {
+.history.list-desc-area .list-desc-title {
     background-color: #4babc7;
+}
+
+.philosophy.list-desc-area .list-desc-title {
+    background-color: #f0697e;
+}
+
+.governance.list-desc-area .list-desc-title {
+    background-color: #9ea1af;
+}
+
+.school-records-area {
+    padding-right: 50px;
+}
+
+.school-records-area ul {
+    @include flex-wrap(wrap);
+}
+
+.school-records-area ul>li {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.school-corevalue-area .core-value-image {
+    padding-right: 30px;
+    margin-left: -15px;
+}
+
+.governance-area .profile {
+    padding-right: 50px;
+}
+
+
+/****************************Head school msg***********************************/
+
+.head-msg.list-desc-area .list-desc-title {
+    background-color: #79b6e4;
 }
 
 
