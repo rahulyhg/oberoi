@@ -28,7 +28,6 @@
 
 -----------------------------------------------------------------------------------*/
 
-
 /*---------------------------------Theme default CSS*---------------------/**/
 
 html {
@@ -41,7 +40,6 @@ html {
 @include font-face("Roboto Light", "../fonts/roboto-light/Roboto-Light-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Regular", "../fonts/roboto-regular/Roboto-Regular-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Thin", "../fonts/roboto-thin/Roboto-Thin-webfont", ("ttf", "woff", "eot"));
-
 /* Bootstrap Variables Goes Here */
 
 $brand-primary: #0d9dff !default;
@@ -58,7 +56,6 @@ $brand-info: #000072 !default;
 }
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 /* Bootstrap Variables Goes Here */
 
 @import "other/font-fix";
@@ -389,7 +386,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /****************************2 header***********************************/
 
 .navbar-brand {
@@ -422,7 +418,7 @@ body {
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     background-color: #509e99;
-    color: white!important;
+    color: white !important;
 }
 
 
@@ -619,6 +615,20 @@ body {
     font-size: 25px;
 }
 
+//about-us page scss
+.caret-right {
+    a {
+        &:before {
+            content: "\f0da";
+            font: normal normal normal 14px/1 FontAwesome;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            color: grey;
+        }
+    }
+}
+//about-us page scss ends
 
 /****************************4 footer***********************************/
 
