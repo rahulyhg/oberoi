@@ -20,13 +20,14 @@
       4.3 trips
       4.4 curricular activity
 
-    3 main-campus-area
+    5 main-campus-area
       3.1 broadcasting-slider
       3.2 campus-area
-    4 footer
+    6 footer
        4.1 footer clients list
 
 -----------------------------------------------------------------------------------*/
+
 
 /*---------------------------------Theme default CSS*---------------------/**/
 
@@ -40,6 +41,7 @@ html {
 @include font-face("Roboto Light", "../fonts/roboto-light/Roboto-Light-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Regular", "../fonts/roboto-regular/Roboto-Regular-webfont", ("ttf", "woff", "eot"));
 @include font-face("Roboto Thin", "../fonts/roboto-thin/Roboto-Thin-webfont", ("ttf", "woff", "eot"));
+
 /* Bootstrap Variables Goes Here */
 
 $brand-primary: #0d9dff !default;
@@ -56,6 +58,7 @@ $brand-info: #000072 !default;
 }
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
 /* Bootstrap Variables Goes Here */
 
 @import "other/font-fix";
@@ -386,6 +389,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /****************************2 header***********************************/
 
 .navbar-brand {
@@ -437,18 +441,28 @@ body {
     padding: 15px 45px;
     color: #58595b;
     @extend .font13;
-    &:active {
-        background-color: #fff;
-        color: #509e99;
-    }
     &:hover {
         background-color: #509e99;
         color: white;
     }
     &:focus,
-    {
+    &:active {
         background-color: #fff;
         color: #509e99;
+    }
+    &:focus:before,
+    &:active:before {
+        opacity: 1;
+    }
+    &:before {
+        content: "\f0da";
+        color: #509e99;
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include transform(translateY(-50%));
+        opacity: 0;
     }
 }
 
@@ -488,19 +502,22 @@ body {
     text-align: center;
 }
 
+.banner-effect1 img {
+    @include transition(all 1.2s ease);
+}
 
-/****************************about-us-area ***********************************/
+.banner-effect1:hover img {
+    @include transform(scale(1.1));
+}
+
+
+/****************************3 about-us-area ***********************************/
+
+
+/****************************3.2 Our History ***********************************/
 
 .history.list-desc-area .list-desc-title {
     background-color: #4babc7;
-}
-
-.philosophy.list-desc-area .list-desc-title {
-    background-color: #f0697e;
-}
-
-.governance.list-desc-area .list-desc-title {
-    background-color: #9ea1af;
 }
 
 .school-records-area {
@@ -516,9 +533,23 @@ body {
     margin-bottom: 5px;
 }
 
+
+/****************************3.3 Our philosophy ***********************************/
+
+.philosophy.list-desc-area .list-desc-title {
+    background-color: #f0697e;
+}
+
 .school-corevalue-area .core-value-image {
     padding-right: 30px;
     margin-left: -15px;
+}
+
+
+/****************************3.4 Governance ***********************************/
+
+.governance.list-desc-area .list-desc-title {
+    background-color: #9ea1af;
 }
 
 .governance-area .profile {
@@ -526,11 +557,23 @@ body {
 }
 
 
-/****************************Head school msg***********************************/
+/****************************4 goregoan-campus***********************************/
+
+
+/****************************4.1 Head school msg***********************************/
 
 .head-msg.list-desc-area .list-desc-title {
     background-color: #79b6e4;
 }
+
+
+/****************************4.2 athletic program***********************************/
+
+
+/****************************4.3 trips***********************************/
+
+
+/****************************4.4 curricular activity***********************************/
 
 
 /**************************** main-campus-area***********************************/
@@ -592,17 +635,9 @@ body {
     z-index: 1;
 }
 
-.banner-effect1 img {
-    @include transition(all 1.2s ease);
-}
-
 .banner-effect1 .text-1 {
     opacity: 0;
     @include transition(all 1.2s ease);
-}
-
-.banner-effect1:hover img {
-    @include transform(scale(1.1));
 }
 
 .banner-effect1:hover .text-1 {
@@ -615,22 +650,8 @@ body {
     font-size: 25px;
 }
 
-//about-us page scss
-.caret-right {
-    a {
-        &:before {
-            content: "\f0da";
-            font: normal normal normal 14px/1 FontAwesome;
-            position: absolute;
-            left: 0;
-            top: 15px;
-            color: grey;
-        }
-    }
-}
-//about-us page scss ends
 
-/****************************4 footer***********************************/
+/****************************6 footer***********************************/
 
 footer {
     padding: 10px 0;
