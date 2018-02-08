@@ -3,7 +3,7 @@
         <div class="container">
             <div class="aboutus-main-area">
                 <div class="sidenav-list-area pull-left">
-                    <div class="sidenav-list list-group caret-right">
+                    <div class="sidenav-list list-group">
                         <a href="" class="list-group-item text-capitalize font13">About Us</a>
                         <a href="" class="list-group-item text-capitalize font13" ng-click="selected='history'">Our History</a>
                         <a href="" class="list-group-item text-capitalize font13" ng-click="selected='philosophy'">Our Philosophy</a>
@@ -11,39 +11,52 @@
                         <a href="" class="list-group-item text-capitalize font13" ng-click="selected='safety'">Safety</a>
                     </div>
                 </div>
-                <div ng-if="selected=='history'" class="list-desc-area pull-left">
+                <!-- Our history secion -->
+                <div ng-if="selected=='history'"  class="history list-desc-area  pull-left">
                     <div class="list-desc-bg d-flex relate">
                         <div class="list-desc-img">
                             <figure>
                                 <img src="img/aboutus/aboutus-bg.png" class="img-responsive" alt="Background Image">
                             </figure>
                         </div>
-                        <div class="list-desc-title d-flex align-items-center">
-                            <h3 class="padd-tb15 color-white-text line-ht ">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
-                            </h3>
+                        <div class="list-desc-title d-flex">
+                            <div class="d-table">
+                                <div class="d-cell align-middle">
+                                    <h3 class="padd-tb15 color-white-text line-ht ">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="school-history-area section-padding">
-                        <p class="line-ht">Oberoi International School is Nursery - 12 school, which began in August 2008. Oberoi International School is an initiative of the Oberoi Foundation and aims to provide world-class education focusing on the holistic development
+                        <p class="font17 line-ht">Oberoi International School is Nursery - 12 school, which began in August 2008. Oberoi International School is an initiative of the Oberoi Foundation and aims to provide world-class education focusing on the holistic development
                             of young learners. The School is a contemporary urban school, and a part of Oberoi Realty's integrated township - Oberoi Garden City, which is spread across 80 acres of land located in theGoregaon (East) suburb of Mumbai.
                         </p>
-                        <div class="school-records-area section-padding">
-                            <ul class="list-unstyled d-flex align-items-center text-center">
-                                <li>
-                                    <span class="d-block">OVER</span>
-                                    <span class="d-block">1600</span>
-                                    <span class="d-block">STUDENTS</span>
+                        <div class="school-records-area padd-tb30">
+                            <ul class="list-unstyled d-flex align-items-center text-center mg-bt0">
+                                <li class="d-flex align-items-center justify-content-center">
+                                    <div class="line-ht">
+                                        <p class=" font13">OVER</p>
+                                        <span class="text-number">1600</span>
+                                        <p class=" font13">STUDENTS</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="d-block">17</span>
-                                    <span class="d-block">DIFFERENT</span>
-                                    <span class="d-block">NATIONALITIES</span>
+                                <li class="d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <span class="text-number">17</span>
+                                        <span class="d-block font13">DIFFERENT</span>
+                                        <span class="d-block font13">NATIONALITIES</span>
+                                    </div>
                                 </li>
-                                <li>
-                                    <img src="img/aboutus/partner-three.png" class="img-responsive" alt="School Status">
+                                <li class="d-flex align-items-center justify-content-center">
+                                    <p>
+                                        <img src="img/aboutus/partner-three.png" class="img-responsive center-block" alt="School Status">
+                                    </p>
                                 </li>
-                                <li>
-                                    <img src="img/aboutus/partner-one.png" class="img-responsive" alt="School Status">
+                                <li class="d-flex align-items-center justify-content-center">
+                                    <p>
+                                        <img src="img/aboutus/partner-one.png" class="img-responsive center-block" alt="School Status">
+                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -57,83 +70,111 @@
                     </div>
                 </div>
                 <!--Our philosophy section-->
-                <div ng-if="selected=='philosophy'" class="list-desc-area pull-left">
-                    <div class="list-desc-bg d-flex align-items-center">
-                        <figure>
-                            <img src="img/aboutus/philosophy-bg.jpg" class="img-responsive" alt="Banner Image">
-                        </figure>
-                        <div class="list-desc-title">
-                            <h4>Our Vision</h4>
-                            <p>At Oberoi International School we give our students the</p>
-                            <h2>Freedom to think.Empower to be…</h2>
+                <div ng-if="selected=='philosophy'"  class="philosophy list-desc-area pull-left">
+                    <div class="list-desc-bg d-flex relate">
+                        <div class="list-desc-img">
+                            <figure>
+                                <img src="img/aboutus/philosophy-bg.jpg" class="img-responsive" alt="Banner Image">
+                            </figure>
+                        </div>
+                        <div class="list-desc-title d-flex">
+                            <div class="d-table">
+                                <div class="d-cell align-middle line-ht">
+                                    <h4 class="color-white-text font-bold font-20">Our Vision</h4>
+                                    <p class="color-white-text font-20">At Oberoi International School we give our students the</p>
+                                    <h2 class="color-white-text">Freedom to think.Empower to be…</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="school-philosophy-area section-padding">
-                        <h3>Our Mission</h3>
-                        <p>We are dedicated to fulfilling every child’s educational and developmental needs in a safe and caring environment conducive to learning and teaching. We aim to create responsible, global citizens who show understanding, compassion
+                        <h3 class="color-text">Our Mission</h3>
+                        <p class="font17 line-ht">We are dedicated to fulfilling every child’s educational and developmental needs in a safe and caring environment conducive to learning and teaching. We aim to create responsible, global citizens who show understanding, compassion
                             and acceptance of the differences in the world. We strive to ensure that every child in our care is empowered to make choices and encouraged to contribute to our community.
                         </p>
-                        <div class="school-corevalue-area section-padding">
+                        <div class="school-corevalue-area padd-tb30">
+                            <h3 class="color-text padd-bt15">Our Core Values</h3>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <figure>
-                                        <img src="img/aboutus/corevalue-knowledge.png" class="img-responsive" alt="Our Knowledge">
-                                    </figure>
-                                    <div class="corevalue-desc">
-                                        <span class="d-block text-uppercase">
-                                           KNOWLEDGE
-                                        </span>
-                                        <p> We value fostering a passion for lifelong learning by acquiring skills and content required for successful and critical thinkers.</p>
+                                    <div class="core-value">
+                                        <div class="core-value-image padd-bt15">
+                                            <figure>
+                                                <img src="img/aboutus/corevalue-knowledge.png" class="img-responsive" alt="Our Knowledge">
+                                            </figure>
+                                        </div>
+                                        <div class="corevalue-desc">
+                                            <span class="d-block text-uppercase font13">
+                                            KNOWLEDGE
+                                            </span>
+                                            <p> We value fostering a passion for lifelong learning by acquiring skills and content required for successful and critical thinkers.</p>
+                                        </div>
                                     </div>
+
                                 </div>
                                 <div class="col-md-2">
-                                    <figure>
-                                        <img src="img/aboutus/corevalue-social.png" class="img-responsive" alt="Our Sociality">
-                                    </figure>
-                                    <div class="corevalue-desc">
-                                        <span class="d-block text-uppercase">
+                                    <div class="core-value">
+                                        <div class="core-value-image padd-bt15">
+                                            <figure>
+                                                <img src="img/aboutus/corevalue-social.png" class="img-responsive" alt="Our Sociality">
+                                            </figure>
+                                        </div>
+                                        <div class="corevalue-desc">
+                                            <span class="d-block text-uppercase font13">
                                           SOCIAL
                                         </span>
-                                        <p>Responsibility We value the ideas that individuals have the ability to change the world and the group has the power to make this a reality.</p>
+                                            <p>Responsibility We value the ideas that individuals have the ability to change the world and the group has the power to make this a reality.</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
-                                    <figure>
-                                        <img src="img/aboutus/corevalue-celebration.png" class="img-responsive" alt="Our Celebration">
-                                    </figure>
-                                    <div class="corevalue-desc">
-                                        <span class="d-block text-uppercase">
+                                    <div class="core-value">
+                                        <div class="core-value-image padd-bt15">
+                                            <figure>
+                                                <img src="img/aboutus/corevalue-celebration.png" class="img-responsive" alt="Our Celebration">
+                                            </figure>
+                                        </div>
+                                        <div class="corevalue-desc">
+                                            <span class="d-block text-uppercase font13">
                                           CELEBRATION 
                                         </span>
-                                        <p>We value celebrating an accomplishment, be it big or small.</p>
+                                            <p>We value celebrating an accomplishment, be it big or small.</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
-                                    <figure>
-                                        <img src="img/aboutus/corevalue-creativity.png" class="img-responsive" alt="Our Creativity">
-                                    </figure>
-                                    <div class="corevalue-desc">
-                                        <span class="d-block text-uppercase">
+                                    <div class="core-value">
+                                        <div class="core-value-image padd-bt15">
+                                            <figure>
+                                                <img src="img/aboutus/corevalue-creativity.png" class="img-responsive" alt="Our Creativity">
+                                            </figure>
+                                        </div>
+                                        <div class="corevalue-desc">
+                                            <span class="d-block text-uppercase">
                                           CREATIVITY
                                         </span>
-                                        <p>We value igniting the spark of creativity and curiosity in our students.</p>
+                                            <p>We value igniting the spark of creativity and curiosity in our students.</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
-                                    <figure>
-                                        <img src="img/aboutus/corevalue-respect.png" class="img-responsive" alt="Our Respect">
-                                    </figure>
-                                    <div class="corevalue-desc">
-                                        <span class="d-block text-uppercase">
+                                    <div class="core-value">
+                                        <div class="core-value-image padd-bt15">
+                                            <figure>
+                                                <img src="img/aboutus/corevalue-respect.png" class="img-responsive" alt="Our Respect">
+                                            </figure>
+                                        </div>
+                                        <div class="corevalue-desc">
+                                            <span class="d-block text-uppercase">
                                           respect
                                         </span>
-                                        <p>We value treating others the way we ourselves like to be treated.</p>
+                                            <p>We value treating others the way we ourselves like to be treated.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="school-statement">
-                            <h3>Ois Statement On International-mindedness</h3>
+                            <h3 class="color-text">Ois Statement On International-mindedness</h3>
                             <p>OIS defines international-mindedness as a way of viewing the world whereby people of all nationalities, cultures, religions and lifestyles are valued equally as individuals, and where our connections with and responsibilities
                                 to this rich global community are celebrated, practiced and considered important.</p>
                             <p>International-mindedness at OIS means demonstrating the flexibility and curiosity that enables us to appreciate not only our many differences, but also our common humanity. It means that we strive to overcome barriers and use
@@ -142,14 +183,20 @@
                     </div>
                 </div>
                 <!--Our Governance section -->
-                <div ng-if="selected=='governance'" class="list-desc-area pull-left">
+                <div ng-if="selected=='governance'" class="governance list-desc-area pull-left">
                     <div class="list-desc-bg d-flex">
-                        <figure>
-                            <img src="img/aboutus/governance-bg.jpg" class="img-responsive" alt="Governance's photograph">
-                        </figure>
-                        <div class="list-desc-title d-flex align-items-center">
-                            <h3>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
-                            </h3>
+                        <div class="list-desc-img">
+                            <figure>
+                                <img src="img/aboutus/governance-bg.jpg" class="img-responsive" alt="Governance's photograph">
+                            </figure>
+                        </div>
+                        <div class="list-desc-title d-flex">
+                            <div class="d-table">
+                                <div class="d-cell align-middle line-ht">
+                                    <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="governance-area section-padding">
@@ -161,8 +208,8 @@
                                             <img src="img/aboutus/governance1.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
-                                        <span class="d-block profile-data-name text-uppercase text-uppercase ">BINDU OBEROI</span>
+                                    <div class="profile-data padd-tb15">
+                                        <span class="d-block profile-data-name text-uppercase">BINDU OBEROI</span>
                                     </div>
                                 </div>
 
@@ -174,7 +221,7 @@
                                             <img src="img/aboutus/governance2.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block  profile-data-name text-uppercase">vikas OBEROI</span>
                                     </div>'
                                 </div>
@@ -186,7 +233,7 @@
                                             <img src="img/aboutus/governance3.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block  profile-data-name text-uppercase">DR. PAUL FOCHTMAN</span>
                                     </div>
                                 </div>
@@ -198,7 +245,7 @@
                                             <img src="img/aboutus/governance4.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block  profile-data-name text-uppercase">MONICA ANAND</span>
                                     </div>
                                 </div>
@@ -212,7 +259,7 @@
                                             <img src="img/aboutus/governance5.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block  profile-data-name  text-uppercase">VIDHURITA PATNAIK</span>
                                     </div>
                                 </div>
@@ -224,7 +271,7 @@
                                             <img src="img/aboutus/governance6.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block profile-data-name text-uppercase">ROOPA PURUSHOTHAMAN</span>
                                     </div>'
                                 </div>
@@ -236,7 +283,7 @@
                                             <img src="img/aboutus/governance7.png" class="img-responsive" alt="Governance's photograph">
                                         </figure>
                                     </div>
-                                    <div class="profile-data">
+                                    <div class="profile-data padd-tb15">
                                         <span class="d-block profile-data-name text-uppercase">DR. INDU SHAHANI</span>
                                     </div>
                                 </div>
@@ -249,7 +296,7 @@
                                         </figure>
                                     </div>
                                 </div>
-                                <div class="profile-data">
+                                <div class="profile-data padd-tb15">
                                     <span class="d-block  profile-data-name text-uppercase">RADHIKA PEREIRA</span>
                                 </div>
                             </div>
