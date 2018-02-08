@@ -1,16 +1,16 @@
 <main>
-    <section class="goregoan-campus">
+    <section class="goregoan-campus" ng-init="selected='message'">
         <div class="container">
             <div class="campus-main-area">
                 <div class="sidenav-list-area pull-left">
-                    <div class="sidenav-list list-group">
+                    <div class="sidenav-list list-group caret-right">
                         <a href="" class="list-group-item text-capitalize">Goregaon Campus</a>
-                        <a href="" class="list-group-item text-capitalize">Message from the Head of School</a>
-                        <a href="" class="list-group-item text-capitalize">Athletics</a>
-                        <a href="" class="list-group-item text-capitalize">Trips</a>
-                        <a href="" class="list-group-item text-capitalize">Extra-curricular Activities</a>
-                        <a href="" class="list-group-item text-capitalize">Community Outreach</a>
-                        <a href="" class="list-group-item text-capitalize">Facilities</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='message'">Message from the Head of School</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='athletics'">Athletics</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='trips'">Trips</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='curricular'">Extra-curricular Activities</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='community'">Community Outreach</a>
+                        <a href="" class="list-group-item text-capitalize" ng-click="selected='facilities'">Facilities</a>
                     </div>
                 </div>
                 <div class="list-desc-area pull-left" style="display:none;">
@@ -23,7 +23,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="goregoan-campus-area pull-left wd100 section-padding" style="display:none;">
+                <!--Message from the Head of School section-->
+                <div ng-if="selected=='message'" class="goregoan-campus-area pull-left wd100 section-padding">
                     <div class="row">
                         <div class="col-md-2">
                             <div class="profile">
@@ -54,7 +55,7 @@
 
                 </div>
                 <!--Athletic Program section-->
-                <div class="list-desc-area pull-left" style="display:none;">
+                <div ng-if="selected=='athletics'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex align-items-center">
                         <figure>
                             <img src="img/goregoan-campus/athletic-program-bg.jpg" class="img-responsive" alt="Banner Image">
@@ -91,7 +92,7 @@
                     </div>
                 </div>
                 <!--Trips section -->
-                <div class="list-desc-area pull-left" style="display:none;">
+                <div ng-if="selected=='trips'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex">
                         <figure>
                             <img src="img/goregoan-campus/trips/trips-bg.jpg" class="img-responsive" alt="Where we are">
@@ -105,7 +106,7 @@
                         <div class="row">
                             <div class="col-md-7 col-md-offset-3">
                                 <div class="events-title">
-                                    <h3>Trips & Events</h3>
+                                    <h3>Trips &amp; Events</h3>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +209,7 @@
                     </div>
                 </div>
                 <!-- Extra-curricular section -->
-                <div class="list-desc-area pull-left" style="display:block;">
+                <div ng-if="selected=='curricular'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex">
                         <figure>
                             <img src="img/goregoan-campus/curricular-activity/curricular-activity-bg.jpg" class="img-responsive" alt="Where we are">
@@ -219,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="curricular-area pull-left wd100 section-padding">
+                <div ng-if="selected=='curricular'" class="curricular-area pull-left wd100 section-padding">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile">
@@ -297,7 +298,7 @@
                                             <h3>Extra-curricular Activities</h3>
                                         </div>
                                         <p>ECAs are activities run either by our school’s teachers or outside agencies. ECAs provided by our faculty and staff are called Internal ECAs and those provided by outside agencies are referred to as External ECAs.
-                                            To facilitate communication between parents & providers, by default parent email addresses are shared with the providers of the ECAs which your child has chosen. Parents are advised to enroll their children
+                                            To facilitate communication between parents &amp; providers, by default parent email addresses are shared with the providers of the ECAs which your child has chosen. Parents are advised to enroll their children
                                             only if they permit us to share their email with the vendor. We do our best to vet outside providers, but cannot guarantee that the services they provide are of the highest quality or value. Please read carefully
                                             to note the fees charged, the schedule and the resources which may not be included as a part of the fee. These details will be included in the course description which will be mailed via school announcements.
                                             There will be no trial period. Therefore if the student discontinues after the activities have begun we will not be able to refund the fee. If parents are not sure about an ECA, we suggest you opt for the one

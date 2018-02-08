@@ -1,17 +1,17 @@
 <main>
-    <section class="aboutus">
+    <section class="aboutus" ng-init="selected='history'">
         <div class="container">
             <div class="aboutus-main-area">
                 <div class="sidenav-list-area pull-left">
                     <div class="sidenav-list list-group caret-right">
                         <a href="" class="list-group-item text-capitalize font13">About Us</a>
-                        <a href="" class="list-group-item text-capitalize font13">Our History</a>
-                        <a href="" class="list-group-item text-capitalize font13">Our Philosophy</a>
-                        <a href="" class="list-group-item text-capitalize font13">Governance</a>
-                        <a href="" class="list-group-item text-capitalize font13">Safety</a>
+                        <a href="" class="list-group-item text-capitalize font13" ng-click="selected='history'">Our History</a>
+                        <a href="" class="list-group-item text-capitalize font13" ng-click="selected='philosophy'">Our Philosophy</a>
+                        <a href="" class="list-group-item text-capitalize font13" ng-click="selected='governance'">Governance</a>
+                        <a href="" class="list-group-item text-capitalize font13" ng-click="selected='safety'">Safety</a>
                     </div>
                 </div>
-                <div class="list-desc-area pull-left">
+                <div ng-if="selected=='history'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex relate">
                         <div class="list-desc-img">
                             <figure>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <!--Our philosophy section-->
-                <div class="list-desc-area pull-left" style="display:none;">
+                <div ng-if="selected=='philosophy'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex align-items-center">
                         <figure>
                             <img src="img/aboutus/philosophy-bg.jpg" class="img-responsive" alt="Banner Image">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <!--Our Governance section -->
-                <div class="list-desc-area pull-left" style="display:none">
+                <div ng-if="selected=='governance'" class="list-desc-area pull-left">
                     <div class="list-desc-bg d-flex">
                         <figure>
                             <img src="img/aboutus/governance-bg.jpg" class="img-responsive" alt="Governance's photograph">
