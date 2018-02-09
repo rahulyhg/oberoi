@@ -26,5 +26,19 @@ myApp.controller('HomeCtrl', function($scope, TemplateService, NavigationService
         broadcastingSub: 'TO BRING OUT THE STAR IN YOU'
     }];
 
+    //For new and updates
+    $scope.news = [{
+            news: 'Lorem Ipsum Dolor Sit Ame',
+            date: '5 Nov',
+            year: '2017'
+
+        },
+        {
+            news: 'Lorem Ipsum Dolor Sit Ameas',
+            date: '6 Nov',
+            year: '2018'
+
+        },
+    ];
 
 });

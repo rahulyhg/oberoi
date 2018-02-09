@@ -49,6 +49,7 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
+$brand-yellow: #e3a236 !default;
 .color-text {
     color: #509e99 !important;
 }
@@ -198,6 +199,11 @@ h6 {
     margin-bottom: 0;
 }
 
+.mg-tb0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .wd100 {
     width: 100%;
 }
@@ -223,7 +229,7 @@ h6 {
 }
 
 .font13 {
-    font-size: 13px!important;
+    font-size: 13px;
 }
 
 .font17 {
@@ -231,7 +237,7 @@ h6 {
 }
 
 .font-20 {
-    font-size: 20px!important;
+    font-size: 20px;
 }
 
 .line-ht {
@@ -354,6 +360,7 @@ p {
 //We reduced the main main default width & height of flexslider's control paging
 .flexslider {
     margin: 0;
+    border: 1px solid transparent;
 }
 
 .flex-control-paging li a {
@@ -367,6 +374,21 @@ p {
 .img-full {
     width: 100%;
     display: block;
+}
+
+//Animation classes
+
+/************ Note: We need to use only @extend method to extend these classes***************/
+
+.anim-bt-tp {
+    // Animation from bottom to top
+    content: '';
+    @include position(absolute, 0 0 0 0);
+    opacity: 0;
+    @include transition(all 0.3s ease-out);
+    @include transform(scaleY(0));
+    @include transform-origin(50% 100%);
+    z-index: 1;
 }
 
 header {
@@ -434,11 +456,12 @@ body {
 }
 
 .sidenav-list-area {
-    width: 20%;
+    width: 19%;
 }
 
 .sidenav-list-area>.sidenav-list>a.list-group-item {
-    padding: 15px 45px;
+    padding: 14px 45px;
+    @include border-right-radius(0);
     color: #58595b;
     @extend .font13;
     &:hover {
@@ -464,12 +487,36 @@ body {
         @include transform(translateY(-50%));
         opacity: 0;
     }
+    line-height: 16px;
 }
 
 .sidenav-list-area>.sidenav-list>a.list-group-item:first-child,
 .sidenav-list-area>.sidenav-list>a.list-group-item:last-child {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+}
+
+.side-nav-active {
+    background-color: white;
+    color: #4babc7 !important;
+    @extend .font-bold;
+    &:before {
+        opacity: 1 !important;
+    }
+}
+
+.sidenav-list-area>.sidenav-list>.list-group-item:first-child {
+    cursor: default;
+    color: #4babc7;
+    @extend .font-bold;
+    &:hover {
+        background-color: white;
+        color: #4babc7;
+    }
+    &:focus:before,
+    &:active:before {
+        opacity: 0;
+    }
 }
 
 .list-desc-area {
@@ -495,6 +542,10 @@ body {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 155px;
+}
+
+.profile .profile-image img {
+    border-radius: 50%;
 }
 
 .profile .profile-data .profile-data-name {
@@ -556,6 +607,9 @@ body {
     padding-right: 50px;
 }
 
+// .governance-area .profile-image img {
+//     border-radius: 50%;
+// }
 
 /****************************4 goregoan-campus***********************************/
 
@@ -569,11 +623,95 @@ body {
 
 /****************************4.2 athletic program***********************************/
 
+.athletic.list-desc-area .list-desc-title {
+    background-color: #878eaa;
+}
+
+.athletic-program-calender .program-profile {
+    @include size(122px,
+    122px);
+    border-radius: 50%;
+    background-color: #878eaa;
+}
+
 
 /****************************4.3 trips***********************************/
 
+.trips.list-desc-area .list-desc-title {
+    background-color: #e3a236;
+}
+
+.events-area {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.events-area .profile .profile-data .profile-data-name {
+    text-align: left;
+}
+
+//Pagination
+.pagination>li:last-child>a {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.pagination>li:first-child>a {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.pagination>li>a:hover {
+    border-color: $brand-yellow;
+    background-color: white;
+    color: $brand-yellow;
+}
+
+.pagination>li>a,
+{
+    padding: 2px 8px;
+    margin: 0 3px;
+    font-weight: bold;
+    background-color: $brand-yellow;
+    border-color: $brand-yellow;
+    color: white;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+    color: $brand-yellow;
+    background-color: white;
+    border-color: $brand-yellow;
+}
+
 
 /****************************4.4 curricular activity***********************************/
+
+.curricular.list-desc-area .list-desc-title {
+    background-color: #93a841;
+}
+
+.curricular-area .profile-image img {
+    width: 250px;
+}
+
+.curricular-area strong {
+    @extend .font-bold;
+    @extend .font13;
+}
+
+.registration-area ol.registration-list,
+.registration-area ul.activity-sublist {
+    padding-left: 15px;
+}
+
+.registration-area ul.activity-sublist {
+    list-style-type: square;
+}
 
 
 /**************************** main-campus-area***********************************/
@@ -606,6 +744,7 @@ body {
 }
 
 .broadcasting-msg-area h2 {
+    color: black;
     font-size: 36px;
 }
 
@@ -623,16 +762,25 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2
 }
 
-.banner-effect1:before {
-    @include position(absolute,
-    0 0 0 0);
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    @include transform(translateY(500px));
-    @include transition(all 1.2s ease);
-    z-index: 1;
+.compus1.banner-effect1 {
+    &:hover:before {
+        background-color: rgba(147, 168, 65, 0.84);
+        opacity: 1;
+        @extend .anim-bt-tp;
+        @include transform(scaleY(1));
+    }
+}
+
+.compus2.banner-effect1 {
+    &:hover:before {
+        background-color: rgba(224, 154, 96, 0.72);
+        opacity: 1;
+        @extend .anim-bt-tp;
+        @include transform(scaleY(1));
+    }
 }
 
 .banner-effect1 .text-1 {
@@ -648,6 +796,10 @@ body {
     color: white;
     font-family: "Roboto Black";
     font-size: 25px;
+}
+
+.news-area ul {
+    @include flex-wrap(wrap);
 }
 
 
