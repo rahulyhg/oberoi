@@ -360,14 +360,24 @@ p {
         height: auto;
     }
     .flex-prev {
-        left: 10px !important;
+        left: 0px !important;
     }
     .flex-next {
-        right: 10px !important;
+        right: 0px !important;
     }
 }
 
-//We reduced the main main default width & height of flexslider's control paging
+.flex-direction-nav a:before {
+    content: '\f0d9';
+    font-family: FontAwesome;
+    font-size: 20px;
+}
+
+.flex-direction-nav a.flex-next:before {
+    content: '\f0da';
+}
+
+//We have reduced the main default width & height of flexslider's control paging
 .flexslider {
     margin: 0;
     border: 1px solid transparent;
@@ -394,8 +404,7 @@ p {
     // Animation from bottom to top
     content: '';
     @include position(absolute, 0 0 0 0);
-    opacity: 0;
-    @include transition(all 0.3s ease-out);
+    @include transition(transform 0.3s ease-out);
     @include transform(scaleY(0));
     @include transform-origin(50% 100%);
     z-index: 1;
@@ -460,6 +469,12 @@ body {
 
 /****************************consistent area(For all pages) ***********************************/
 
+//Temp class
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+}
+
 .text-number {
     font-size: 65px;
     @extend .font-thin;
@@ -482,6 +497,7 @@ body {
     &:active {
         background-color: #fff;
         color: #509e99;
+        @extend .font-bold;
     }
     &:focus:before,
     &:active:before {
@@ -776,19 +792,21 @@ body {
 }
 
 .compus1.banner-effect1 {
-    &:hover:before {
+    &:before {
         background-color: rgba(147, 168, 65, 0.84);
-        opacity: 1;
         @extend .anim-bt-tp;
+    }
+    &:hover:before {
         @include transform(scaleY(1));
     }
 }
 
 .compus2.banner-effect1 {
-    &:hover:before {
+    &:before {
         background-color: rgba(224, 154, 96, 0.72);
-        opacity: 1;
         @extend .anim-bt-tp;
+    }
+    &:hover:before {
         @include transform(scaleY(1));
     }
 }
@@ -806,6 +824,10 @@ body {
     color: white;
     font-family: "Roboto Black";
     font-size: 25px;
+}
+
+.news-slider .flex-control-nav {
+    display: none;
 }
 
 .news-area ul {
