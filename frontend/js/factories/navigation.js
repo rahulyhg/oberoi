@@ -2,7 +2,7 @@ myApp.factory('NavigationService', function() {
     var navigation = [{
             name: "About Us",
             classis: "active",
-            anchor: "home",
+            anchor: "aboutus",
             subnav: [{
                     name: "Our History",
                     classis: "active",
@@ -53,12 +53,6 @@ myApp.factory('NavigationService', function() {
                 anchor: "home"
             }]
         },
-        {
-            name: "Contact Us",
-            classis: "active",
-            anchor: "links",
-            subnav: []
-        }
     ];
 
     return {

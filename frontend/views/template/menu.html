@@ -1,15 +1,18 @@
 <ul class="nav navbar-nav">
-    <li ng-repeat="menu in navigation" ui-sref-active="active">
+    <li ng-repeat="menu in navigation">
         <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor">{{menu.name}}<span class="caret"></span></a>
-        <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a>
+        <!-- <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a> -->
         <ul class="dropdown-menu" ng-if="menu.subnav!='';">
-            <li ng-repeat="submenu in menu.subnav" ui-sref-active="active">
-                <a ui-serf="{{submenu.anchor}}" ng-if="submenu.anchor">{{submenu.name}}</a>
-                <a herf="{{submenu.link}}" ng-if="submenu.link">{{submenu.name}}</a>
+            <li ng-repeat="submenu in menu.subnav">
+                <a ui-sref="{{submenu.anchor}}" ng-if="submenu.anchor" ui-sref-active="active">{{submenu.name}}</a>
+                <!-- <a herf="{{submenu.link}}" ng-if="submenu.link">{{submenu.name}}</a> -->
             </li>
         </ul>
     </li>
     <li>
-        <a href="">Goregoan Campus | JVLR Campus</a>
+        <a href="">Contact Us</a>
+    </li>
+    <li>
+        <a href=""><span ui-sref="goregoan-campus">Goregoan Campus </span> | <span ui-sref="aboutus"> JVLR Campus </span></a>
     </li>
 </ul>

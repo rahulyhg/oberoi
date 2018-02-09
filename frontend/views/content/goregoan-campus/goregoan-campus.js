@@ -11,4 +11,5 @@ myApp.controller('GoregoanCampusCtrl', function($scope, TemplateService, Navigat
             }, 5000);
         });
     };
+    $scope.currentPage=1;
 });
