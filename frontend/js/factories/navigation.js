@@ -26,32 +26,32 @@ myApp.factory('NavigationService', function() {
         }, {
             name: "Learning",
             classis: "active",
-            anchor: "links",
-            subnav: [{
-                name: "Subnav1",
-                classis: "active",
-                anchor: "home"
-            }]
+            anchor: "links1",
+            // subnav: [{
+            //     name: "Subnav1",
+            //     classis: "active",
+            //     anchor: "home"
+            // }]
         },
         {
             name: "Admissions",
             classis: "active",
-            anchor: "links",
-            subnav: [{
-                name: "Subnav1",
-                classis: "active",
-                anchor: "home"
-            }]
+            anchor: "links1",
+            // subnav: [{
+            //     name: "Subnav1",
+            //     classis: "active",
+            //     anchor: "home"
+            // }]
         },
         {
             name: "Employment",
             classis: "active",
-            anchor: "links",
-            subnav: [{
-                name: "Subnav1",
-                classis: "active",
-                anchor: "home"
-            }]
+            anchor: "links1",
+            // subnav: [{
+            //     name: "Subnav1",
+            //     classis: "active",
+            //     anchor: "home"
+            // }]
         },
     ];
 
