@@ -247,6 +247,16 @@ h6 {
 .submit-btn {
     @include button-variant(white, #509e99, #509e99);
     @include button-size(6px, 20px, 14px, 1.428571429, 0);
+    position: relative;
+    &:before {
+        content: "\f0da";
+        color: white;
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: -1px;
+        @include transform(translateY(-50%));
+    }
 }
 
 img.loading {
