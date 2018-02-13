@@ -154,7 +154,7 @@ h6 {
     margin: 0 0 10px;
 }
 
-h3{
+h3 {
     font-size: 1.8em;
 }
 
@@ -233,8 +233,8 @@ h3{
 }
 
 .font13 {
-   // font-size: 13px;
-   font-size: 1em;
+    // font-size: 13px;
+    font-size: 1em;
 }
 
 .font17 {
@@ -246,7 +246,7 @@ h3{
 }
 
 .line-ht {
-     line-height: 1.322;
+    line-height: 1.322;
 }
 
 .submit-btn {
@@ -320,8 +320,8 @@ a:focus {
 }
 
 p {
-   // font-size: 13px;
-   font-size: 1em;
+    // font-size: 13px;
+    font-size: 1em;
 }
 
 //bootstrap forms
@@ -428,8 +428,8 @@ body {
     padding-top: 84px;
     color: #58595b;
     font-family: "Roboto Light", sans-serif;
-   // font-size: 14px;
-   font-size: 1vw;
+    // font-size: 14px;
+    font-size: 1vw;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -462,7 +462,8 @@ body {
 }
 
 .nav>li>a {
-    font-size: 13px;
+    // font-size: 13px;
+    font-size: 1em;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -480,22 +481,20 @@ body {
     margin: 0;
     padding: 0;
 }
-.main-section-width{
+
+.main-section-width {
     width: 90%;
     margin: auto;
     overflow: hidden;
 }
+
 .text-number {
     font-size: 65px;
     @extend .font-thin;
 }
 
-.sidenav-list-area {
-    width: 19%;
-}
-
 .sidenav-list-area>.sidenav-list>a.list-group-item {
-    padding: 6.7% 15%;
+    padding: 7.00% 15%;
     @include border-right-radius(0);
     color: #58595b;
     @extend .font13;
@@ -554,8 +553,9 @@ body {
     }
 }
 
+.sidenav-list-area,
 .list-desc-area {
-    width: 80%;
+    width: 100%;
 }
 
 .list-desc-area .list-desc-bg {
@@ -577,6 +577,11 @@ body {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 155px;
+}
+
+.aboutus-main-area,
+.campus-main-area {
+    @include flex-wrap(wrap);
 }
 
 .profile .profile-image img {
@@ -663,8 +668,8 @@ body {
 }
 
 .athletic-program-calender .program-profile {
-    @include size(122px,
-    122px);
+    min-width: 122px;
+    min-height: 122px;
     border-radius: 50%;
     background-color: #878eaa;
 }

@@ -1,10 +1,25 @@
  @media (max-width: $screen-sm-max) {
      // Tablet
  }
-
+ 
  @media (min-width: 576px) {
      /****************************consistent area(For all pages) ***********************************/
-     
+     .sidenav-list-area {
+         max-width: 17.333333%;
+         -webkit-flex: 0 0 17.333333%;
+         /* Safari 6.1+ */
+         -ms-flex: 0 0 17.333333%;
+         /* IE 10 */
+         flex: 0 0 17.333333%;
+     }
+     .list-desc-area {
+         max-width: 82.333333%;
+         -webkit-flex: 0 0 0 82.333333%;
+         /* Safari 6.1+ */
+         -ms-flex: 0 0 82.333333%;
+         /* IE 10 */
+         flex: 0 0 82.333333%;
+     }
      .list-desc-area .list-desc-img {
          max-width: 58.333333%;
          flex: 0 0 58.333333%;

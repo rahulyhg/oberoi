@@ -1,8 +1,8 @@
 <main>
     <section class="aboutus" ng-init="selected='history'">
         <div class="container-fluid">
-            <div class="aboutus-main-area main-section-width">
-                <div class="sidenav-list-area pull-left">
+            <div class="aboutus-main-area main-section-width  d-flex">
+                <div class="sidenav-list-area">
                     <div class="sidenav-list list-group">
                         <a href="" class="list-group-item text-capitalize font13">About Us</a>
                         <a href="" class="list-group-item text-capitalize font13" ng-click="selected='history'" ng-class="{'side-nav-active':selected=='history'}">Our History</a>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <!-- Our history secion -->
-                <div ng-if="selected=='history'" class="history list-desc-area  pull-left">
+                <div ng-if="selected=='history'" class="history list-desc-area ">
                     <div class="list-desc-bg d-flex relate">
                         <div class="list-desc-img">
                             <figure>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <!--Our philosophy section-->
-                <div ng-if="selected=='philosophy'" class="philosophy list-desc-area pull-left">
+                <div ng-if="selected=='philosophy'" class="philosophy list-desc-area">
                     <div class="list-desc-bg d-flex relate">
                         <div class="list-desc-img">
                             <figure>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <!--Our Governance section -->
-                <div ng-if="selected=='governance'" class="governance list-desc-area pull-left">
+                <div ng-if="selected=='governance'" class="governance list-desc-area ">
                     <div class="list-desc-bg d-flex">
                         <div class="list-desc-img">
                             <figure>
