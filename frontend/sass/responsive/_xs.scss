@@ -11,16 +11,16 @@
     }
      //about us scss
      
-     .list-desc-title {
-         display: none;
-     }
-     .list-desc-img {
-         &:hover+.list-desc-title,
-         &:focus+.list-desc-title,
-         &:active+.list-desc-title {
-             display: block;
-         }
-     }
+    //  .list-desc-title {
+    //      display: none;
+    //  }
+    //  .list-desc-img {
+    //      &:hover+.list-desc-title,
+    //      &:focus+.list-desc-title,
+    //      &:active+.list-desc-title {
+    //          display: block;
+    //      }
+    //  }
      .section-padding {
          text-align: justify;
      }
