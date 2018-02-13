@@ -20,7 +20,7 @@ myApp.factory('NavigationService', function() {
                 {
                     name: "Safety",
                     classis: "active",
-                    anchor: "about-us"
+                    anchor: "aboutus"
                 }
             ]
         }, {
