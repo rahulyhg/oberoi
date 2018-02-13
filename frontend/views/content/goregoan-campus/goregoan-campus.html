@@ -1,383 +1,456 @@
 <main>
     <section class="goregoan-campus" ng-init="selected='message'">
-        <div class="container">
-            <div class="campus-main-area">
-                <div class="sidenav-list-area pull-left">
-                    <div class="sidenav-list list-group caret-right">
-                        <a href="" class="list-group-item text-capitalize">Goregaon Campus</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='message'" ng-class="{'side-nav-active':selected=='message'}">Message from the Head of School</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='athletics'">Athletics</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='trips'">Trips</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='curricular'">Extra-curricular Activities</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='community'">Community Outreach</a>
-                        <a href="" class="list-group-item text-capitalize" ng-click="selected='facilities'">Facilities</a>
+        <div class="container-fluid">
+            <div class="main-section-width">
+                <div class="campus-main-area">
+                    <div class="sidenav-list-area pull-left">
+                        <div class="sidenav-list list-group caret-right">
+                            <a href="" class="list-group-item text-capitalize">Goregaon Campus</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='message'" ng-class="{'side-nav-active':selected=='message'}">Message from the Head of School</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='athletics'">Athletics</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='trips'">Trips</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='curricular'">Extra-curricular Activities</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='community'">Community Outreach</a>
+                            <a href="" class="list-group-item text-capitalize" ng-click="selected='facilities'">Facilities</a>
+                        </div>
+                    </div>
+                    <!-- head school message section -->
+                    <div ng-if="selected=='message'" class="head-msg list-desc-area pull-left">
+                        <div class="list-desc-bg d-flex relate">
+                            <div class="list-desc-img">
+                                <figure>
+                                    <img src="img/goregoan-campus/goregoan-campus-bg.jpg" class="img-full" alt="Background Image">
+                                </figure>
+                            </div>
+                            <div class="list-desc-title d-flex">
+                                <div class="d-table">
+                                    <div class="d-cell align-middle">
+                                        <h3 class="color-white-text line-ht">“Education is not preparation for life; education is life itself.”</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- head school message section -->
-                <div ng-if="selected=='message'" class="head-msg list-desc-area pull-left">
+
+                <div ng-if="selected=='message'" class="goregoan-campus-area pull-left wd100 section-padding">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="profile">
+                                <div class="profile-image">
+                                    <figure>
+                                        <img src="img/goregoan-campus/profile-image.png" class="img-responsive center-block" alt="-Neil McWilliam">
+                                    </figure>
+                                </div>
+                                <div class="profile-data">
+                                    <div class="profile-data-name padd-tb15 text-center"><i>-Neil McWilliam</i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="campus-desc-area">
+                                <h3 class="color-text line-ht">Welcome to the website of Oberoi International School, Mumbai, one of the premier international
+                                    schools in India</h3>
+                                <p class="padd-bt15 mg-bt0">We are a happy school, because happy children learn better than unhappy ones. We are, as
+                                    one parent described us, “the school that children run to in the mornings”. The warmth
+                                    of this school is apparent the moment you walk through the doors, as is the energy. Our
+                                    classrooms are seldom quiet, because they are filled with activity as children (and teachers)
+                                    actively learn with enthusiasm. The engagement of the children is obvious; learning is
+                                    a joyful experience which is energetically pursued.</p>
+                                <p class="padd-bt15 mg-bt0">Our children learn together, because research teaches us that a collaborative environment
+                                    is the most fertile one for learning to grow. We are a happy, international learning
+                                    community, flourishing in an extraordinary facility which is unique to Mumbai.</p>
+                                <p class="padd-bt15 mg-bt0">Our facilities and resources are outstanding because we believe children are very important.Our
+                                    international and local teachers are skilled and dedicated because they understand how
+                                    important children are. Our graduates score outstanding IB Diploma results, but that
+                                    is just a part of the picture. At OIS, we do more than produce great results - we produce
+                                    great people.</p>
+                                <p class="padd-bt15 mg-bt0 font17">Come and join us, join the adventure!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Athletic Program section-->
+                <div ng-if="selected=='athletics'" class=" athletic list-desc-area pull-left">
                     <div class="list-desc-bg d-flex relate">
                         <div class="list-desc-img">
                             <figure>
-                                <img src="img/goregoan-campus/goregoan-campus-bg.jpg" class="img-responsive" alt="Background Image">
+                                <img src="img/goregoan-campus/athletic-program-bg.jpg" class="img-responsive" alt="Banner Image">
                             </figure>
                         </div>
                         <div class="list-desc-title d-flex">
                             <div class="d-table">
                                 <div class="d-cell align-middle">
-                                    <h3 class="color-white-text line-ht">“Education is not preparation for life; education is life itself.”</h3>
+                                    <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="athletic-program-area section-padding">
+                        <h3 class="color-text">OIS Athletic Program</h3>
+                        <span class="d-block font17">Philosophy</span>
+                        <p>Oberoi International School believes that a dynamic program of student activities is vital to the
+                            educational development of our students. We believe that the athletic program at OIS should reflect
+                            and support the school’s mission and core values. Athletics contributes significantly to the
+                            total development of every student. OIS serves our students through two distinct, yet mutually
+                            supportive programs: The Inter-scholastic Sports Program and the Intramural Sports Program.
+                        </p>
+                        <p class="padd-tb15 mg-bt0">Sport is integral to individuals, social and cultural development. At OIS, we model the enduring
+                            values of sport: Commitment, good sportsmanship, team work, responsibility, resilience, and healthy
+                            competition. We develop these values by learning from our victories, our losses, the day-to-day
+                            challenges of practice, and our efforts to find balance between our academic, athletic, and personal
+                            lives. As teachers, coaches, and student-athletes, we strive to excel by being clear on our common
+                            goals and by being loyal to each other and to our values.
+                        </p>
+                        <p class="padd-bt15 mg-bt0">Through the inter-scholastic and intramural programs, we emphasize that participation in athletics
+                            is a privilege and we encourage all students to take part. With this privilege go certain responsibilities.
+                            We have high expectations for behavior, commitment, academic achievement, and making healthy
+                            choices. In conclusion, through the OIS mission and core values our athletic program seeks to
+                            support our students as they strive to excel.</p>
+                        <div class="athletic-program-calender d-flex align-items-center padd-tp30">
+                            <div class="program-profile d-flex align-items-center justify-content-center text-center">
+                                <span class="d-block color-white-text">Please <br>Click Here for</span>
+                            </div>
+                            <div class="program-profile-data">
+                                <ul>
+                                    <li>Athletic Season Calendar 2017-18</li>
+                                    <li>Current Athletic try-outs and Practice Schedule</li>
+                                    <li>OIS Athletic Student Handbook 2017-18</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Trips section -->
+                <div ng-if="selected=='trips'" class="trips list-desc-area pull-left">
+                    <div class="list-desc-bg d-flex relate">
+                        <div class="list-desc-img">
+                            <figure>
+                                <img src="img/goregoan-campus/trips/trips-bg.jpg" class="img-responsive" alt="Where we are">
+                            </figure>
+                        </div>
+                        <div class="list-desc-title d-flex">
+                            <div class="d-table">
+                                <div class="d-cell align-middle">
+                                    <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div ng-if="selected=='trips'" class="events-area pull-left wd100 section-padding">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-2">
+                            <div class="events-title padd-bt15">
+                                <h3 class="color-text mob-heading">Trips & Events</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="currentPage==1">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="profile">
+                                        <div class="profile-image padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/trips/event1.png" class="img-responsive center-block" alt="Governance's photograph">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="profile">
+                                        <div class="profile-data">
+                                            <span class="d-block text-uppercase profile-data-name font17">Niall De Burca</span>
+                                            <p>Niall De Burca conducted a workshop on "Storytelling as a Tool of Education"
+                                                using both traditional and original tales plus the ideas which children provided.
+                                                He ensured a fantastic experience and imbued the audience with the knowledge
+                                                that they too are storytellers!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="profile">
+                                        <div class="profile-image padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/trips/event2.png" class="img-responsive center-block" alt="Governance's photograph">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="profile">
+                                        <div class="profile-data">
+                                            <span class="d-block text-uppercase profile-data-name font17">Curtis Jobling</span>
+                                            <p>Not only is he a brilliant author and illustrator but the combination of the
+                                                two elements in his talks had the whole audience, adults and children alike,
+                                                totally enthralled from start to finish. His wit and humour and interaction
+                                                with his audience served to inspire and motivate not just the children but
+                                                also the staff. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="currentPage==1">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="profile">
+                                        <div class="profile-image padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/trips/event3.png" class="img-responsive center-block" alt="Governance's photograph">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="profile">
+                                        <div class="profile-data">
+                                            <span class="d-block text-uppercase text-uppercase profile-data-name font17">Pete Lockett</span>
+                                            <p>Pete has taken his knowledge of Indian instruments, rhythms and techniques, along
+                                                with his innate knowledge of Western music and has applied these skills into
+                                                a unique "world-view" of percussion. It was indeed a once in a lifetime opportunity
+                                                to have him perform live for us.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="profile">
+                                        <div class="profile-image  padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/trips/event4.png" class="img-responsive center-block" alt="Governance's photograph">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="profile">
+                                        <div class="profile-data">
+                                            <span class="d-block text-uppercase text-uppercase profile-data-name font17">Curtis Jobling</span>
+                                            <p>Not only is he a brilliant author and illustrator but the combination of the
+                                                two elements in his talks had the whole audience, adults and children alike,
+                                                totally enthralled from start to finish. His wit and humour and interaction
+                                                with his audience served to inspire and motivate not just the children but
+                                                also the staff.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination section -->
+                    <div class="pagination-area pull-right">
+                        <ul class="mg-tb0" uib-pagination direction-links="false" total-items="64" ng-model="currentPage" num-pages="smallnumPages"
+                            max-size="3" force-ellipses="true"></ul>
+                    </div>
+                </div>
 
-            <div ng-if="selected=='message'" class="goregoan-campus-area pull-left wd100 section-padding">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="profile">
-                            <div class="profile-image">
-                                <figure>
-                                    <img src="img/goregoan-campus/profile-image.png" class="img-responsive center-block" alt="-Neil McWilliam">
-                                </figure>
-                            </div>
-                            <div class="profile-data">
-                                <div class="profile-data-name padd-tb15 text-center"><i>-Neil McWilliam</i></div>
-                            </div>
+                <!-- Extra-curricular section -->
+                <div ng-if="selected=='curricular'" class="curricular list-desc-area pull-left">
+                    <div class="list-desc-bg d-flex relate">
+                        <div class="list-desc-img">
+                            <figure>
+                                <img src="img/goregoan-campus/curricular-activity/curricular-activity-bg.jpg" class="img-responsive" alt="Where we are">
+                            </figure>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="campus-desc-area">
-                            <h3 class="color-text line-ht">Welcome to the website of Oberoi International School, Mumbai, one of the premier international schools in India</h3>
-                            <p class="padd-bt15 mg-bt0">We are a happy school, because happy children learn better than unhappy ones. We are, as one parent described us, “the school that children run to in the mornings”. The warmth of this school is apparent the moment you walk
-                                through the doors, as is the energy. Our classrooms are seldom quiet, because they are filled with activity as children (and teachers) actively learn with enthusiasm. The engagement of the children is obvious; learning
-                                is a joyful experience which is energetically pursued.</p>
-                            <p class="padd-bt15 mg-bt0">Our children learn together, because research teaches us that a collaborative environment is the most fertile one for learning to grow. We are a happy, international learning community, flourishing in an extraordinary facility
-                                which is unique to Mumbai.</p>
-                            <p class="padd-bt15 mg-bt0">Our facilities and resources are outstanding because we believe children are very important.Our international and local teachers are skilled and dedicated because they understand how important children are. Our graduates score
-                                outstanding IB Diploma results, but that is just a part of the picture. At OIS, we do more than produce great results - we produce great people.</p>
-                            <p class="padd-bt15 mg-bt0 font17">Come and join us, join the adventure!</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!--Athletic Program section-->
-            <div ng-if="selected=='athletics'" class=" athletic list-desc-area pull-left">
-                <div class="list-desc-bg d-flex relate">
-                    <div class="list-desc-img">
-                        <figure>
-                            <img src="img/goregoan-campus/athletic-program-bg.jpg" class="img-responsive" alt="Banner Image">
-                        </figure>
-                    </div>
-                    <div class="list-desc-title d-flex">
-                        <div class="d-table">
-                            <div class="d-cell align-middle">
-                                <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="athletic-program-area section-padding">
-                    <h3 class="color-text">OIS Athletic Program</h3>
-                    <span class="d-block font17">Philosophy</span>
-                    <p>Oberoi International School believes that a dynamic program of student activities is vital to the educational development of our students. We believe that the athletic program at OIS should reflect and support the school’s mission
-                        and core values. Athletics contributes significantly to the total development of every student. OIS serves our students through two distinct, yet mutually supportive programs: The Inter-scholastic Sports Program and the Intramural
-                        Sports Program.
-                    </p>
-                    <p class="padd-tb15 mg-bt0">Sport is integral to individuals, social and cultural development. At OIS, we model the enduring values of sport: Commitment, good sportsmanship, team work, responsibility, resilience, and healthy competition. We develop these values
-                        by learning from our victories, our losses, the day-to-day challenges of practice, and our efforts to find balance between our academic, athletic, and personal lives. As teachers, coaches, and student-athletes, we strive to excel
-                        by being clear on our common goals and by being loyal to each other and to our values.
-                    </p>
-                    <p class="padd-bt15 mg-bt0">Through the inter-scholastic and intramural programs, we emphasize that participation in athletics is a privilege and we encourage all students to take part. With this privilege go certain responsibilities. We have high expectations
-                        for behavior, commitment, academic achievement, and making healthy choices. In conclusion, through the OIS mission and core values our athletic program seeks to support our students as they strive to excel.</p>
-                    <div class="athletic-program-calender d-flex align-items-center padd-tp30">
-                        <div class="program-profile d-flex align-items-center justify-content-center text-center">
-                            <span class="d-block color-white-text">Please <br>Click Here for</span>
-                        </div>
-                        <div class="program-profile-data">
-                            <ul>
-                                <li>Athletic Season Calendar 2017-18</li>
-                                <li>Current Athletic try-outs and Practice Schedule</li>
-                                <li>OIS Athletic Student Handbook 2017-18</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Trips section -->
-            <div ng-if="selected=='trips'" class="trips list-desc-area pull-left">
-                <div class="list-desc-bg d-flex relate">
-                    <div class="list-desc-img">
-                        <figure>
-                            <img src="img/goregoan-campus/trips/trips-bg.jpg" class="img-responsive" alt="Where we are">
-                        </figure>
-                    </div>
-                    <div class="list-desc-title d-flex">
-                        <div class="d-table">
-                            <div class="d-cell align-middle">
-                                <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ng-if="selected=='trips'" class="events-area pull-left wd100 section-padding">
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-2">
-                        <div class="events-title padd-bt15">
-                            <h3 class="color-text">Trips & Events</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" ng-if="currentPage==1">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile">
-                                    <div class="profile-image padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/trips/event1.png" class="img-responsive center-block" alt="Governance's photograph">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="profile">
-                                    <div class="profile-data">
-                                        <span class="d-block text-uppercase profile-data-name font17">Niall De Burca</span>
-                                        <p>Niall De Burca conducted a workshop on "Storytelling as a Tool of Education" using both traditional and original tales plus the ideas which children provided. He ensured a fantastic experience and imbued the audience
-                                            with the knowledge that they too are storytellers!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile">
-                                    <div class="profile-image padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/trips/event2.png" class="img-responsive center-block" alt="Governance's photograph">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="profile">
-                                    <div class="profile-data">
-                                        <span class="d-block text-uppercase profile-data-name font17">Curtis Jobling</span>
-                                        <p>Not only is he a brilliant author and illustrator but the combination of the two elements in his talks had the whole audience, adults and children alike, totally enthralled from start to finish. His wit and humour
-                                            and interaction with his audience served to inspire and motivate not just the children but also the staff. </p>
-                                    </div>
+                        <div class="list-desc-title d-flex">
+                            <div class="d-table">
+                                <div class="d-cell align-middle">
+                                    <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" ng-if="currentPage==1">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile">
-                                    <div class="profile-image padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/trips/event3.png" class="img-responsive center-block" alt="Governance's photograph">
-                                        </figure>
-                                    </div>
+                <div ng-if="selected=='curricular'" class="curricular-area pull-left wd100 section-padding">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="profile">
+                                <div class="profile-image padd-bt15">
+                                    <figure>
+                                        <img src="img/goregoan-campus/curricular-activity/curricular-activity1.png" class="img-responsive center-block" alt="Our Curricular activity">
+                                    </figure>
                                 </div>
                             </div>
-                            <div class="col-md-7">
-                                <div class="profile">
-                                    <div class="profile-data">
-                                        <span class="d-block text-uppercase text-uppercase profile-data-name font17">Pete Lockett</span>
-                                        <p>Pete has taken his knowledge of Indian instruments, rhythms and techniques, along with his innate knowledge of Western music and has applied these skills into a unique "world-view" of percussion. It was indeed a
-                                            once in a lifetime opportunity to have him perform live for us.</p>
-                                    </div>
+                            <div class="curricular-desc-area">
+                                <div class="curricular-title padd-tp15">
+                                    <h3>Extra-curricular Activities</h3>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile">
-                                    <div class="profile-image  padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/trips/event4.png" class="img-responsive center-block" alt="Governance's photograph">
-                                        </figure>
-                                    </div>
+                                <p>The ECA program is designed to provide our students with an opportunity to have enriching
+                                    experiences beyond the normal school day. The primary goal of ECAs is for students to
+                                    have fun while learning important life skills and developing mastery of certain skills.
+                                    The program is not competitively driven, but instead, is focused on exposing students
+                                    to new experiences and enriching their lives. ECAs will allow students to try new experiences
+                                    or participate in areas they are already passionate about. Each ECA aims to be student
+                                    centered and to maximize student participation in the activity.</p>
+                                <div class="curricular-title padd-tp30">
+                                    <h3>Schedule and Times</h3>
                                 </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="profile">
-                                    <div class="profile-data">
-                                        <span class="d-block text-uppercase text-uppercase profile-data-name font17">Curtis Jobling</span>
-                                        <p>Not only is he a brilliant author and illustrator but the combination of the two elements in his talks had the whole audience, adults and children alike, totally enthralled from start to finish. His wit and humour
-                                            and interaction with his audience served to inspire and motivate not just the children but also the staff.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- pagination section -->
-                <div class="pagination-area pull-right">
-                    <ul class="mg-tb0" uib-pagination direction-links="false" total-items="64" ng-model="currentPage" num-pages="smallnumPages" max-size="3" force-ellipses="true"></ul>
-                </div>
-            </div>
-
-            <!-- Extra-curricular section -->
-            <div ng-if="selected=='curricular'" class="curricular list-desc-area pull-left">
-                <div class="list-desc-bg d-flex relate">
-                    <div class="list-desc-img">
-                        <figure>
-                            <img src="img/goregoan-campus/curricular-activity/curricular-activity-bg.jpg" class="img-responsive" alt="Where we are">
-                        </figure>
-                    </div>
-                    <div class="list-desc-title d-flex">
-                        <div class="d-table">
-                            <div class="d-cell align-middle">
-                                <h3 class="color-white-text line-ht">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor”
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ng-if="selected=='curricular'" class="curricular-area pull-left wd100 section-padding">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile">
-                            <div class="profile-image padd-bt15">
-                                <figure>
-                                    <img src="img/goregoan-campus/curricular-activity/curricular-activity1.png" class="img-responsive center-block" alt="Our Curricular activity">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="curricular-desc-area">
-                            <div class="curricular-title padd-tp15">
-                                <h3>Extra-curricular Activities</h3>
-                            </div>
-                            <p>The ECA program is designed to provide our students with an opportunity to have enriching experiences beyond the normal school day. The primary goal of ECAs is for students to have fun while learning important life skills and
-                                developing mastery of certain skills. The program is not competitively driven, but instead, is focused on exposing students to new experiences and enriching their lives. ECAs will allow students to try new experiences or
-                                participate in areas they are already passionate about. Each ECA aims to be student centered and to maximize student participation in the activity.</p>
-                            <div class="curricular-title padd-tp30">
-                                <h3>Schedule and Times</h3>
-                            </div>
-                            <p>In semester I ECAs are run from first week of September until mid-December, and in semester 2 from mid-January to mid-May tentatively. Each ECA is scheduled to meet once a week at its assigned time. ECA sessions cancelled due
-                                to an illness or holidays, will not be made up.
-                                <span class="d-block">
+                                <p>In semester I ECAs are run from first week of September until mid-December, and in semester
+                                    2 from mid-January to mid-May tentatively. Each ECA is scheduled to meet once a week
+                                    at its assigned time. ECA sessions cancelled due to an illness or holidays, will not
+                                    be made up.
+                                    <span class="d-block">
                                     <strong> ECAs run from 3:00 p.m. - 4:10 p.m. on weekdays. ECAs will not run on days the school is not open for students (including holidays and half days).</strong></p>
                                     </span>
-                                <div class="registration-area">
-                                    <span class="d-block"><strong>Registration:</strong></span>
-                                    <ol class="registration-list">
-                                        <li>Go to www.oberoi.myschoolone.com</li>
-                                        <li>Click tab: Parents</li>
-                                        <li> Username: Your email address registered with the school (the email address on which you receive the school announcements).</li>
-                                        <li>Password: 12345 (unless you have changed it previously)</li>
-                                        <li>Click tab: ECA. You would be redirected to the ECA portal where you will be able to view the details related to the ECA program for that semester.</li>
-                                        <li> Activities that you may wish to opt for will categorized as given below:
-                                            <ul class="activity-sublist">
-                                                <li>Be Creative</li>
-                                                <li>Be Active</li>
-                                                <li>Be Healthy</li>
-                                                <li>Be Curious</li>
-                                                <li>Be Safe</li>
-                                            </ul>
-                                        </li>
-                                        <li> You will be able to register only on those activities which have vacancies.</li>
-                                    </ol>
-                                    <p>After a particular date which will be conveyed via the School Announcements email, your selection will be locked and an email with the total fee due will be sent.
-                                    </p>
-                                    <p>Please note that cancellation of even one of the chosen activities, or deduction in amount emailed to you will lead to cancellation of all your choices.</p>
-                                </div>
+                                    <div class="registration-area">
+                                        <span class="d-block"><strong>Registration:</strong></span>
+                                        <ol class="registration-list">
+                                            <li>Go to www.oberoi.myschoolone.com</li>
+                                            <li>Click tab: Parents</li>
+                                            <li> Username: Your email address registered with the school (the email address on
+                                                which you receive the school announcements).</li>
+                                            <li>Password: 12345 (unless you have changed it previously)</li>
+                                            <li>Click tab: ECA. You would be redirected to the ECA portal where you will be able
+                                                to view the details related to the ECA program for that semester.</li>
+                                            <li> Activities that you may wish to opt for will categorized as given below:
+                                                <ul class="activity-sublist">
+                                                    <li>Be Creative</li>
+                                                    <li>Be Active</li>
+                                                    <li>Be Healthy</li>
+                                                    <li>Be Curious</li>
+                                                    <li>Be Safe</li>
+                                                </ul>
+                                            </li>
+                                            <li> You will be able to register only on those activities which have vacancies.</li>
+                                        </ol>
+                                        <p>After a particular date which will be conveyed via the School Announcements email,
+                                            your selection will be locked and an email with the total fee due will be sent.
+                                        </p>
+                                        <p>Please note that cancellation of even one of the chosen activities, or deduction
+                                            in amount emailed to you will lead to cancellation of all your choices.</p>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="profile">
-                                    <div class="profile-image padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/curricular-activity/curricular-activity2.png" class="img-responsive center-block" alt="Our Curricular activity">
-                                        </figure>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="profile">
+                                        <div class="profile-image padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/curricular-activity/curricular-activity2.png" class="img-responsive center-block" alt="Our Curricular activity">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="profile">
+                                        <div class="profile-image padd-bt15">
+                                            <figure>
+                                                <img src="img/goregoan-campus/curricular-activity/curricular-activity3.png" class="img-responsive center-block" alt="Our Curricular activity">
+                                            </figure>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="profile">
-                                    <div class="profile-image padd-bt15">
-                                        <figure>
-                                            <img src="img/goregoan-campus/curricular-activity/curricular-activity3.png" class="img-responsive center-block" alt="Our Curricular activity">
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="curricular-desc-area">
-                                    <div class="curricular-title padd-tp15">
-                                        <h3>Internal vs. External ECAs:</h3>
-                                    </div>
-                                    <p>ECAs are activities run either by our school’s teachers or outside agencies. ECAs provided by our faculty and staff are called Internal ECAs and those provided by outside agencies are referred to as External ECAs. To
-                                        facilitate communication between parents & providers, by default parent email addresses are shared with the providers of the ECAs which your child has chosen. Parents are advised to enroll their children only if
-                                        they permit us to share their email with the vendor. We do our best to vet outside providers, but cannot guarantee that the services they provide are of the highest quality or value. Please read carefully to note
-                                        the fees charged, the schedule and the resources which may not be included as a part of the fee. These details will be included in the course description which will be mailed via school announcements. There will
-                                        be no trial period. Therefore if the student discontinues after the activities have begun we will not be able to refund the fee. If parents are not sure about an ECA, we suggest you opt for the one which you are
-                                        confident about.</p>
-                                    <div class="curricular-title padd-tp30">
-                                        <h3>Schedule and Times</h3>
-                                    </div>
-                                    <div class="padd-bt15">
-                                        <span class="d-block"><strong>Transportation:</strong></span>
-                                        <p>For students who normally ride the bus home from school, buses will leave after ECAs by 4:30 p.m.</p>
-                                    </div>
-                                    <div class="padd-bt15">
-                                        <span class="d-block"><strong>Student Dress:</strong></span>
-                                        <p>Unless otherwise indicated by the ECA instructor, the school’s PE uniform must be worn at all times for sporting ECAs. ECAs such as Judo, Taekwondo and Ballet require a specialized dress which will have to be purchased
-                                            separately. Appropriate footwear and equipment must also be used, and students failing to wear or bring the correct uniform and equipment will not be allowed to participate in that particular session. The normal
-                                            school uniform is to be worn for all other ECAs.
-                                        </p>
-                                        <p class="padd-tp15">Music instruments (e.g. guitar) needed for an ECA will have to be brought by the student.</p>
-                                    </div>
-                                    <div class="padd-tp15">
-                                        <span class="d-block"><strong>Student Behavior and Attendance</strong></span>
-                                        <p>All school rules and procedures apply during ECA sessions. Students who skip ECAs, behave improperly, or break school rules during ECAs are subject to the normal school disciplinary procedures.</p>
-                                    </div>
-                                    <div class="padd-tp15">
-                                        <span class="d-block"><strong>Maximum Number of ECAs:</strong></span>
-                                        <p>SKG students may sign up for a maximum of one ECA, while all other students are permitted to sign up for a maximum of three ECA sessions during each semester. Please note that if an ECA meets on two days during
-                                            the week it counts as two separate sessions.
-                                        </p>
-                                        <p>Students on the athletic team or those who intend to try-out for a team should ensure that their practice schedules do not clash with the ECAs which they choose.</p>
-                                        <p>The reason for these maximum numbers is that ECA spaces are limited and on a first come-first-served-basis, and OIS wants every student to have a chance to take the ECA of their choice. Unfortunately, even with
-                                            this limitation, students may not be able to enter the ECA of their choice.</p>
-                                        <p></p>
-                                        <div class="padd-tb15">
-                                            <span class="d-block">Fees: </span>
-                                            <p>The fees for internal ECAs are INR 2,000 per ECA per semester (inclusive of taxes), except for community service ECAs and the Secondary Musical ECA, which are free. The fees associated with external ECAs are
-                                                set by the providers and include service tax already. All fees for ECA must be paid at school prior to a child being able to attend an ECA.</p>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="curricular-desc-area">
+                                        <div class="curricular-title padd-tp15">
+                                            <h3>Internal vs. External ECAs:</h3>
                                         </div>
-                                        <p>Teachers will take attendance at the beginning of each session, and only students on the attendance lists will be able to participate.</p>
-                                        <p>Fee payments may be made by cheques or bank draft, and should be made out to “Oberoi Foundation-ECA</p>
-                                        <p>On the days of fees submission there will be a drop-box set up in the lobby near the bus desk where cheques can be dropped. Please be sure to include your child’s name, grade and the ECAs you are enrolling them
-                                            in on the back of the cheque. Please do not send cheques to school with your child if there is a chance that they will lose it. For bank details to transfer the fee electronically, please write to eca@oberoi-is.org</p>
-                                        <div>
-                                            <span class="d-block">Refunds:</span>
-                                            <p>All payments are final and nonrefundable. In the event that we are unable to run an ECA because we have not met with the minimum registration those parents would be informed and the refunds will be processed
-                                                automatically.
-                                            </p>
+                                        <p>ECAs are activities run either by our school’s teachers or outside agencies. ECAs
+                                            provided by our faculty and staff are called Internal ECAs and those provided
+                                            by outside agencies are referred to as External ECAs. To facilitate communication
+                                            between parents & providers, by default parent email addresses are shared with
+                                            the providers of the ECAs which your child has chosen. Parents are advised to
+                                            enroll their children only if they permit us to share their email with the vendor.
+                                            We do our best to vet outside providers, but cannot guarantee that the services
+                                            they provide are of the highest quality or value. Please read carefully to note
+                                            the fees charged, the schedule and the resources which may not be included as
+                                            a part of the fee. These details will be included in the course description which
+                                            will be mailed via school announcements. There will be no trial period. Therefore
+                                            if the student discontinues after the activities have begun we will not be able
+                                            to refund the fee. If parents are not sure about an ECA, we suggest you opt for
+                                            the one which you are confident about.</p>
+                                        <div class="curricular-title padd-tp30">
+                                            <h3>Schedule and Times</h3>
                                         </div>
-                                        <div>
-                                            <span class="d-block padd-tb15">ECAs in Semester 2:</span>
-                                            <p>All ECAs will require re-registration in semester 2. Signing for semester 1 does not automatically guarantee a spot for semester 2. While the school will endeavor to run all ECAs in semester 2 there is no guarantee
-                                                that all ECAs in semester 1 will run in semester 2.
+                                        <div class="padd-bt15">
+                                            <span class="d-block"><strong>Transportation:</strong></span>
+                                            <p>For students who normally ride the bus home from school, buses will leave after
+                                                ECAs by 4:30 p.m.</p>
+                                        </div>
+                                        <div class="padd-bt15">
+                                            <span class="d-block"><strong>Student Dress:</strong></span>
+                                            <p>Unless otherwise indicated by the ECA instructor, the school’s PE uniform must
+                                                be worn at all times for sporting ECAs. ECAs such as Judo, Taekwondo and
+                                                Ballet require a specialized dress which will have to be purchased separately.
+                                                Appropriate footwear and equipment must also be used, and students failing
+                                                to wear or bring the correct uniform and equipment will not be allowed to
+                                                participate in that particular session. The normal school uniform is to be
+                                                worn for all other ECAs.
                                             </p>
+                                            <p class="padd-tp15">Music instruments (e.g. guitar) needed for an ECA will have to be brought by
+                                                the student.</p>
+                                        </div>
+                                        <div class="padd-tp15">
+                                            <span class="d-block"><strong>Student Behavior and Attendance</strong></span>
+                                            <p>All school rules and procedures apply during ECA sessions. Students who skip
+                                                ECAs, behave improperly, or break school rules during ECAs are subject to
+                                                the normal school disciplinary procedures.</p>
+                                        </div>
+                                        <div class="padd-tp15">
+                                            <span class="d-block"><strong>Maximum Number of ECAs:</strong></span>
+                                            <p>SKG students may sign up for a maximum of one ECA, while all other students are
+                                                permitted to sign up for a maximum of three ECA sessions during each semester.
+                                                Please note that if an ECA meets on two days during the week it counts as
+                                                two separate sessions.
+                                            </p>
+                                            <p>Students on the athletic team or those who intend to try-out for a team should
+                                                ensure that their practice schedules do not clash with the ECAs which they
+                                                choose.</p>
+                                            <p>The reason for these maximum numbers is that ECA spaces are limited and on a
+                                                first come-first-served-basis, and OIS wants every student to have a chance
+                                                to take the ECA of their choice. Unfortunately, even with this limitation,
+                                                students may not be able to enter the ECA of their choice.</p>
+                                            <p></p>
+                                            <div class="padd-tb15">
+                                                <span class="d-block">Fees: </span>
+                                                <p>The fees for internal ECAs are INR 2,000 per ECA per semester (inclusive
+                                                    of taxes), except for community service ECAs and the Secondary Musical
+                                                    ECA, which are free. The fees associated with external ECAs are set by
+                                                    the providers and include service tax already. All fees for ECA must
+                                                    be paid at school prior to a child being able to attend an ECA.</p>
+                                            </div>
+                                            <p>Teachers will take attendance at the beginning of each session, and only students
+                                                on the attendance lists will be able to participate.</p>
+                                            <p>Fee payments may be made by cheques or bank draft, and should be made out to
+                                                “Oberoi Foundation-ECA</p>
+                                            <p>On the days of fees submission there will be a drop-box set up in the lobby near
+                                                the bus desk where cheques can be dropped. Please be sure to include your
+                                                child’s name, grade and the ECAs you are enrolling them in on the back of
+                                                the cheque. Please do not send cheques to school with your child if there
+                                                is a chance that they will lose it. For bank details to transfer the fee
+                                                electronically, please write to eca@oberoi-is.org</p>
+                                            <div>
+                                                <span class="d-block">Refunds:</span>
+                                                <p>All payments are final and nonrefundable. In the event that we are unable
+                                                    to run an ECA because we have not met with the minimum registration those
+                                                    parents would be informed and the refunds will be processed automatically.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="d-block padd-tb15">ECAs in Semester 2:</span>
+                                                <p>All ECAs will require re-registration in semester 2. Signing for semester
+                                                    1 does not automatically guarantee a spot for semester 2. While the school
+                                                    will endeavor to run all ECAs in semester 2 there is no guarantee that
+                                                    all ECAs in semester 1 will run in semester 2.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -386,7 +459,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 </main>

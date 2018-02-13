@@ -154,6 +154,10 @@ h6 {
     margin: 0 0 10px;
 }
 
+h3{
+    font-size: 1.8em;
+}
+
 .section-padding {
     padding: 50px 0;
 }
@@ -229,11 +233,12 @@ h6 {
 }
 
 .font13 {
-    font-size: 13px;
+   // font-size: 13px;
+   font-size: 1em;
 }
 
 .font17 {
-    font-size: 17px!important;
+    font-size: 1.2em !important;
 }
 
 .font-20 {
@@ -241,7 +246,7 @@ h6 {
 }
 
 .line-ht {
-    line-height: 28px;
+     line-height: 1.322;
 }
 
 .submit-btn {
@@ -315,7 +320,8 @@ a:focus {
 }
 
 p {
-    font-size: 13px;
+   // font-size: 13px;
+   font-size: 1em;
 }
 
 //bootstrap forms
@@ -422,11 +428,11 @@ body {
     padding-top: 84px;
     color: #58595b;
     font-family: "Roboto Light", sans-serif;
-    font-size: 14px;
+   // font-size: 14px;
+   font-size: 1vw;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    line-height: 22px;
     overflow-x: hidden;
 }
 
@@ -474,7 +480,11 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.main-section-width{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
 .text-number {
     font-size: 65px;
     @extend .font-thin;
@@ -485,7 +495,7 @@ body {
 }
 
 .sidenav-list-area>.sidenav-list>a.list-group-item {
-    padding: 14px 45px;
+    padding: 6.7% 15%;
     @include border-right-radius(0);
     color: #58595b;
     @extend .font13;
@@ -506,14 +516,13 @@ body {
     &:before {
         content: "\f0da";
         color: #509e99;
-        font: normal normal normal 14px/1 FontAwesome;
+        font: normal normal normal 1em FontAwesome;
         position: absolute;
         top: 50%;
         left: 0;
         @include transform(translateY(-50%));
         opacity: 0;
     }
-    line-height: 16px;
 }
 
 .sidenav-list-area>.sidenav-list>a.list-group-item:first-child,

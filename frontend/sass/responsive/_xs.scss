@@ -1,3 +1,46 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
+     .mob-heading {
+         text-align: center;
+     } 
+     .sidenav-list-area {
+        width: 100%;
+    }
+    .list-desc-area {
+        width: 100%;
+    }
+     //about us scss
+     
+     .list-desc-title {
+         display: none;
+     }
+     .list-desc-img {
+         &:hover+.list-desc-title,
+         &:focus+.list-desc-title,
+         &:active+.list-desc-title {
+             display: block;
+         }
+     }
+     .section-padding {
+         text-align: justify;
+     }
+     .school-corevalue-area {
+         .core-value-image {
+             padding-right: 0;
+             margin-left: 0;
+         }
+         .corevalue-desc {
+             text-align: center;
+         }
+         img {
+             margin: 0 auto;
+         }
+     } //end of about us scss
+     //goregaon campus scss
+     .profile-data {
+         text-align: center;
+         .profile-data-name {
+             text-align: center !important;
+         }
+     } //end of goregaon campus scss
  }
