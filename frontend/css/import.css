@@ -10216,13 +10216,17 @@ h6 {
 .mg-bt0 {
   margin-bottom: 0; }
 
+.mg-tb0 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .wd100 {
   width: 100%; }
 
 .font-black {
   font-family: "Roboto Black", sans-serif; }
 
-.font-bold {
+.font-bold, .sidenav-list-area > .sidenav-list > a.list-group-item:focus, .sidenav-list-area > .sidenav-list > a.list-group-item:active, .side-nav-active, .sidenav-list-area > .sidenav-list > .list-group-item:first-child, .curricular-area strong {
   font-family: "Roboto Bold", sans-serif; }
 
 .font-lt {
@@ -10234,17 +10238,17 @@ h6 {
 .font-thin, .text-number {
   font-family: "Roboto Thin", sans-serif; }
 
-.font13, .sidenav-list-area > .sidenav-list > a.list-group-item, .profile .profile-data .profile-data-name {
-  font-size: 13px !important; }
+.font13, .curricular-area strong {
+  font-size: 13px; }
 
 .font17 {
-  font-size: 17px !important; }
+  font-size: 17px; }
 
 .font-20 {
-  font-size: 20px !important; }
+  font-size: 20px; }
 
 .line-ht {
-  line-height: 28px; }
+  line-height: 1.333; }
 
 .submit-btn {
   color: white;
@@ -10253,7 +10257,8 @@ h6 {
   padding: 6px 20px;
   font-size: 14px;
   line-height: 1.428571429;
-  border-radius: 0; }
+  border-radius: 0;
+  position: relative; }
   .submit-btn:focus, .submit-btn.focus {
     color: white;
     background-color: #3f7c78;
@@ -10286,6 +10291,15 @@ h6 {
   .submit-btn .badge {
     color: #509e99;
     background-color: white; }
+  .submit-btn:before {
+    content: "\f0da";
+    color: white;
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 img.loading {
   text-align: center;
@@ -10329,9 +10343,6 @@ a {
 a:focus {
   outline: 0px solid; }
 
-p {
-  font-size: 13px; }
-
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
@@ -10368,13 +10379,22 @@ p {
   height: auto; }
 
 .flex-direction-nav .flex-prev {
-  left: 10px !important; }
+  left: 0px !important; }
 
 .flex-direction-nav .flex-next {
-  right: 10px !important; }
+  right: 0px !important; }
+
+.flex-direction-nav a:before {
+  content: '\f0d9';
+  font-family: FontAwesome;
+  font-size: 20px; }
+
+.flex-direction-nav a.flex-next:before {
+  content: '\f0da'; }
 
 .flexslider {
-  margin: 0; }
+  margin: 0;
+  border: 1px solid transparent; }
 
 .flex-control-paging li a {
   width: 8px;
@@ -10386,6 +10406,25 @@ p {
 .img-full {
   width: 100%;
   display: block; }
+
+/************ Note: We need to use only @extend method to extend these classes***************/
+.anim-bt-tp, .compus1.banner-effect1:before, .compus2.banner-effect1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  z-index: 1; }
 
 header {
   -webkit-transition: all 300ms ease;
@@ -10399,11 +10438,11 @@ body {
   padding-top: 84px;
   color: #58595b;
   font-family: "Roboto Light", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.5;
   overflow-x: hidden; }
 
 /****************************2 header***********************************/
@@ -10424,9 +10463,6 @@ body {
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.nav > li > a {
-  font-size: 13px; }
-
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -10434,14 +10470,23 @@ body {
   color: white !important; }
 
 /****************************consistent area(For all pages) ***********************************/
-.text-number {
-  font-size: 65px; }
+.dropdown-menu {
+  margin: 0;
+  padding: 0; }
 
-.sidenav-list-area {
-  width: 20%; }
+.main-section-width {
+  width: 90%;
+  margin: auto;
+  overflow: hidden; }
+
+.text-number {
+  font-size: 65px;
+  line-height: 1; }
 
 .sidenav-list-area > .sidenav-list > a.list-group-item {
-  padding: 15px 45px;
+  padding: 7.00% 15%;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
   color: #58595b; }
   .sidenav-list-area > .sidenav-list > a.list-group-item:hover {
     background-color: #509e99;
@@ -10454,7 +10499,7 @@ body {
   .sidenav-list-area > .sidenav-list > a.list-group-item:before {
     content: "\f0da";
     color: #509e99;
-    font: normal normal normal 14px/1 FontAwesome;
+    font: normal normal normal 1em FontAwesome;
     position: absolute;
     top: 50%;
     left: 0;
@@ -10467,8 +10512,24 @@ body {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
+.side-nav-active {
+  background-color: white;
+  color: #4babc7 !important; }
+  .side-nav-active:before {
+    opacity: 1 !important; }
+
+.sidenav-list-area > .sidenav-list > .list-group-item:first-child {
+  cursor: default;
+  color: #4babc7; }
+  .sidenav-list-area > .sidenav-list > .list-group-item:first-child:hover {
+    background-color: white;
+    color: #4babc7; }
+  .sidenav-list-area > .sidenav-list > .list-group-item:first-child:focus:before, .sidenav-list-area > .sidenav-list > .list-group-item:first-child:active:before {
+    opacity: 0; }
+
+.sidenav-list-area,
 .list-desc-area {
-  width: 80%; }
+  width: 100%; }
 
 .list-desc-area .list-desc-bg {
   position: relative;
@@ -10477,6 +10538,11 @@ body {
   box-lines: multiple;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+.list-desc-title h3,
+.list-desc-title h2,
+.campus-desc-area h3 {
+  line-height: 1.333; }
 
 .list-desc-area .list-desc-img {
   width: 100%; }
@@ -10493,6 +10559,17 @@ body {
   background-repeat: no-repeat;
   background-size: 155px; }
 
+.aboutus-main-area,
+.campus-main-area {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.profile .profile-image img {
+  border-radius: 50%; }
+
 .profile .profile-data .profile-data-name {
   text-align: center; }
 
@@ -10508,6 +10585,9 @@ body {
 /****************************3.2 Our History ***********************************/
 .history.list-desc-area .list-desc-title {
   background-color: #4babc7; }
+
+.about-school {
+  line-height: 2; }
 
 .school-records-area {
   padding-right: 50px; }
@@ -10544,9 +10624,72 @@ body {
   background-color: #79b6e4; }
 
 /****************************4.2 athletic program***********************************/
+.athletic.list-desc-area .list-desc-title {
+  background-color: #878eaa; }
+
+.athletic-program-calender .program-profile {
+  min-width: 122px;
+  min-height: 122px;
+  border-radius: 50%;
+  background-color: #878eaa; }
+
 /****************************4.3 trips***********************************/
+.trips.list-desc-area .list-desc-title {
+  background-color: #e3a236; }
+
+.events-area {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.events-area .profile .profile-data .profile-data-name {
+  text-align: left; }
+
+.pagination > li:last-child > a {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+.pagination > li:first-child > a {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
+
+.pagination > li > a:hover {
+  border-color: #e3a236;
+  background-color: white;
+  color: #e3a236; }
+
+.pagination > li > a {
+  padding: 2px 8px;
+  margin: 0 3px;
+  font-weight: bold;
+  background-color: #e3a236;
+  border-color: #e3a236;
+  color: white; }
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  color: #e3a236;
+  background-color: white;
+  border-color: #e3a236; }
+
 /****************************4.4 curricular activity***********************************/
-/**************************** main-campus-area***********************************/
+.curricular.list-desc-area .list-desc-title {
+  background-color: #93a841; }
+
+.curricular-area .profile-image img {
+  width: 250px; }
+
+.registration-area ol.registration-list,
+.registration-area ul.activity-sublist {
+  padding-left: 15px; }
+
+.registration-area ul.activity-sublist {
+  list-style-type: square; }
+
+/****************************Home main-campus-area***********************************/
 .broadcasting-slider .flex-direction-nav a {
   display: none; }
 
@@ -10562,7 +10705,7 @@ body {
   background: rgba(0, 0, 0, 0.54); }
 
 .broadcasting-slider .broadcasting-msg-area {
-  width: 335px;
+  width: 30%;
   position: absolute;
   top: 50%;
   left: 65%;
@@ -10570,6 +10713,7 @@ body {
   transform: translateY(-50%); }
 
 .broadcasting-msg-area h2 {
+  color: black;
   font-size: 36px; }
 
 .campus-area .campus-add {
@@ -10584,21 +10728,22 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0; }
-
-.banner-effect1:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  -webkit-transform: translateY(500px);
-  transform: translateY(500px);
-  -webkit-transition: all 1.2s ease;
-  transition: all 1.2s ease;
-  z-index: 1; }
+  z-index: 2; }
+
+.compus1.banner-effect1:before {
+  background-color: rgba(147, 168, 65, 0.84); }
+
+.compus1.banner-effect1:hover:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1); }
+
+.compus2.banner-effect1:before {
+  background-color: rgba(224, 154, 96, 0.72); }
+
+.compus2.banner-effect1:hover:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1); }
 
 .banner-effect1 .text-1 {
   opacity: 0;
@@ -10612,6 +10757,16 @@ body {
   color: white;
   font-family: "Roboto Black";
   font-size: 25px; }
+
+.news-slider .flex-control-nav {
+  display: none; }
+
+.news-area ul {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 /****************************6 footer***********************************/
 footer {
@@ -10659,13 +10814,6 @@ footer ul.social-links > li > a {
     color: #509e99; }
 
 /**************************** main-campus-area***********************************/
-.broadcasting-slider .broadcasting-msg-area {
-  width: 250px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
 #fancybox-loading,
 .fancybox-close,
 .fancybox-next span,
@@ -10708,6 +10856,20 @@ footer ul.social-links > li > a {
 
 @media (min-width: 576px) {
   /****************************consistent area(For all pages) ***********************************/
+  .sidenav-list-area {
+    max-width: 17.333333%;
+    /* Safari 6.1+ */
+    -ms-flex: 0 0 17.333333%;
+    /* IE 10 */
+    -webkit-box-flex: 0;
+            flex: 0 0 17.333333%; }
+  .list-desc-area {
+    max-width: 82.333333%;
+    /* Safari 6.1+ */
+    -ms-flex: 0 0 82.333333%;
+    /* IE 10 */
+    -webkit-box-flex: 0;
+            flex: 0 0 82.333333%; }
   .list-desc-area .list-desc-img {
     max-width: 58.333333%;
     -webkit-box-flex: 0;
@@ -10730,5 +10892,71 @@ footer ul.social-links > li > a {
     /* IE 10 */
     -webkit-box-flex: 0;
             flex: 0 0 25%; }
-  .school-records-area ul > li:last-child {
-    border: none; } }
+  .school-records-area ul > li:last-child,
+  .news-area ul > li {
+    border: none; }
+  /****************************Home***********************************/
+  .news-area ul > li {
+    max-width: 50%;
+    min-height: 120px;
+    border-right: 1px solid #509e99;
+    /* Safari 6.1+ */
+    -ms-flex: 0 0 50%;
+    /* IE 10 */
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    box-direction: normal;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; } }
+
+@media (min-width: 1367px) {
+  /*---------------------------------Theme default CSS*---------------------/**/
+  body {
+    font-size: 17px; }
+  h2 {
+    font-size: 46px; }
+  h3 {
+    font-size: 36px; }
+  h4 {
+    font-size: 30px; }
+  /****************************consistent area(For all pages) ***********************************/
+  line-ht {
+    line-height: 1.522; }
+  .font17 {
+    font-size: 24px; }
+  .font-20 {
+    font-size: 27px; }
+  .text-1 {
+    font-size: 37px; }
+  .text-number {
+    font-size: 97px; }
+  /****************************Home main-campus-area***********************************/
+  .broadcasting-msg-area h2 {
+    font-size: 62px; }
+  .news-area ul > li {
+    min-height: 261px; } }
+
+@media (max-width: 767px) {
+  .mob-heading {
+    text-align: center; }
+  .sidenav-list-area {
+    width: 100%; }
+  .list-desc-area {
+    width: 100%; }
+  .section-padding {
+    text-align: justify; }
+  .school-corevalue-area .core-value-image {
+    padding-right: 0;
+    margin-left: 0; }
+  .school-corevalue-area .corevalue-desc {
+    text-align: center; }
+  .school-corevalue-area img {
+    margin: 0 auto; }
+  .profile-data {
+    text-align: center; }
+    .profile-data .profile-data-name {
+      text-align: center !important; } }
