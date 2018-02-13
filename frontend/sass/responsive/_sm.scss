@@ -60,3 +60,43 @@
          @include flex-direction(column);
      }
  }
+ 
+ @media (min-width:1367px) {
+     //Extra large devices
+     /*---------------------------------Theme default CSS*---------------------/**/
+     body {
+         font-size: 17px;
+     }
+     h2 {
+         font-size: 46px;
+     }
+     h3 {
+         font-size: 36px;
+     }
+     h4 {
+         font-size: 30px;
+     }
+     /****************************consistent area(For all pages) ***********************************/
+     line-ht {
+         line-height: 1.522;
+     }
+     .font17 {
+         font-size: 24px;
+     }
+     .font-20 {
+         font-size: 27px;
+     }
+     .text-1 {
+         font-size: 37px;
+     }
+     .text-number {
+         font-size: 97px;
+     }
+     /****************************Home main-campus-area***********************************/
+     .broadcasting-msg-area h2 {
+         font-size: 62px;
+     }
+     .news-area ul>li {
+         min-height: 261px;
+     }
+ }

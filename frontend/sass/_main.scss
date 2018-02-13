@@ -155,7 +155,7 @@ h6 {
 }
 
 h3 {
-    font-size: 1.8em;
+    //  font-size: 1.8em;
 }
 
 .section-padding {
@@ -233,12 +233,13 @@ h3 {
 }
 
 .font13 {
-    // font-size: 13px;
-    font-size: 1em;
+    font-size: 13px;
+    // font-size: 1em;
 }
 
 .font17 {
-    font-size: 1.2em !important;
+    // font-size: 1.2em !important;
+    font-size: 17px;
 }
 
 .font-20 {
@@ -246,7 +247,7 @@ h3 {
 }
 
 .line-ht {
-    line-height: 1.322;
+    line-height: 1.333;
 }
 
 .submit-btn {
@@ -321,7 +322,7 @@ a:focus {
 
 p {
     // font-size: 13px;
-    font-size: 1em;
+    //font-size: 1em;
 }
 
 //bootstrap forms
@@ -428,11 +429,12 @@ body {
     padding-top: 84px;
     color: #58595b;
     font-family: "Roboto Light", sans-serif;
-    // font-size: 14px;
-    font-size: 1vw;
+    font-size: 13px;
+    //font-size: 1vw;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
+    line-height: 1.5;
     overflow-x: hidden;
 }
 
@@ -463,7 +465,7 @@ body {
 
 .nav>li>a {
     // font-size: 13px;
-    font-size: 1em;
+    // font-size: 1em;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -491,13 +493,14 @@ body {
 .text-number {
     font-size: 65px;
     @extend .font-thin;
+    line-height: 1;
 }
 
 .sidenav-list-area>.sidenav-list>a.list-group-item {
     padding: 7.00% 15%;
     @include border-right-radius(0);
     color: #58595b;
-    @extend .font13;
+    //  @extend .font13;
     &:hover {
         background-color: #509e99;
         color: white;
@@ -563,6 +566,12 @@ body {
     @include flex-wrap(wrap);
 }
 
+.list-desc-title h3,
+.list-desc-title h2,
+.campus-desc-area h3 {
+    line-height: 1.333;
+}
+
 .list-desc-area .list-desc-img {
     width: 100%;
 }
@@ -589,7 +598,7 @@ body {
 }
 
 .profile .profile-data .profile-data-name {
-    @extend .font13;
+    // @extend .font13;
     text-align: center;
 }
 
@@ -609,6 +618,10 @@ body {
 
 .history.list-desc-area .list-desc-title {
     background-color: #4babc7;
+}
+
+.about-school {
+    line-height: 2;
 }
 
 .school-records-area {
@@ -754,7 +767,7 @@ body {
 }
 
 
-/**************************** main-campus-area***********************************/
+/****************************Home main-campus-area***********************************/
 
 .broadcasting-slider .flex-direction-nav a {
     display: none;
