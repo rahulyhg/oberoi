@@ -9,18 +9,18 @@
     .list-desc-area {
         width: 100%;
     }
+    //home page scss
+    .broadcasting-msg-area h2{
+        font-size: 12px;
+    }
+    .broadcasting-slider .flex-control-nav{
+        display: none;
+    }
+    .m-d-block{
+        display: block;
+    }
+    //end of home page scss
      //about us scss
-     
-    //  .list-desc-title {
-    //      display: none;
-    //  }
-    //  .list-desc-img {
-    //      &:hover+.list-desc-title,
-    //      &:focus+.list-desc-title,
-    //      &:active+.list-desc-title {
-    //          display: block;
-    //      }
-    //  }
      .section-padding {
          text-align: justify;
      }
@@ -43,4 +43,13 @@
              text-align: center !important;
          }
      } //end of goregaon campus scss
+
+     //footer scss
+     footer ul.social-links > li{
+         width: 17px;
+         height: 17px;
+     }
+     footer ul.clients-list > li{
+         padding-left: 0px;
+     }
  }

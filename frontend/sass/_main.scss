@@ -454,6 +454,10 @@ body {
     background-color: white;
 }
 
+.caret{
+    color: #4babc7;
+}
+
 .navbar-default .navbar-nav.active>a .caret {
     color: #509e99;
 }
@@ -589,7 +593,7 @@ body {
 }
 
 .aboutus-main-area,
-.campus-main-area {
+.campus-main-area,.campus-section  {
     @include flex-wrap(wrap);
 }
 
@@ -803,11 +807,8 @@ body {
 }
 
 .campus-area .campus-add {
-    -webkit-flex: 1;
-    /* Safari 6.1+ */
-    -ms-flex: 1;
-    /* IE 10 */
-    flex: 1;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .campus-add .banner-desc {
