@@ -1,6 +1,6 @@
-myApp.controller('GoregoanCampusCtrl', function($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
-    $scope.template = TemplateService.getHTML("content/goregoan-campus/goregoan-campus.html");
-    TemplateService.title = "Goregoan Campus"; //This is the Title of the Website
+myApp.controller('GoregaonCampusCtrl', function($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+    $scope.template = TemplateService.getHTML("content/goregaon-campus/goregaon-campus.html");
+    TemplateService.title = "Goregaon Campus"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
 
     $scope.submitForm = function(data) {

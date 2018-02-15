@@ -14,7 +14,7 @@
       3.3 our philosophy
       3.4 governance
       3.5 safety
-    4 goregoan-campus
+    4 goregaon-campus
       4.1 headschool 
       4.2 athletic program
       4.3 trips
@@ -478,20 +478,20 @@ body {
     background-color: #509e99;
     color: white !important;
 }
+.dropdown-menu{
+    padding: 0;
+}
+.dropdown-menu > li > a{
+    padding: 5px 20px;
+    margin: 5px 0;
+}
 
 
 /****************************consistent area(For all pages) ***********************************/
 
-//Temp class
-.dropdown-menu {
-    margin: 0;
-    padding: 0;
-}
-
 .main-section-width {
     width: 90%;
     margin: auto;
-    overflow: hidden;
 }
 
 .text-number {
@@ -668,7 +668,7 @@ body {
 //     border-radius: 50%;
 // }
 
-/****************************4 goregoan-campus***********************************/
+/****************************4 goregaon-campus***********************************/
 
 
 /****************************4.1 Head school msg***********************************/
@@ -777,6 +777,12 @@ body {
     display: none;
 }
 
+.remove-border-right:nth-child(2){
+    .news-area ul li:nth-child(2){
+        border-right: 0;
+    }
+}
+
 .broadcasting-slider .flex-control-nav {
     width: 20%;
     right: -30px;
@@ -809,6 +815,7 @@ body {
 .campus-area .campus-add {
     width: 100%;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .campus-add .banner-desc {

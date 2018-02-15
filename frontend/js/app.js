@@ -25,10 +25,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locati
             templateUrl: tempateURL,
             controller: 'AboutUsCtrl'
         })
-        .state('goregoan-campus', {
-            url: "/goregoan-campus",
+        .state('goregaon-campus', {
+            url: "/goregaon-campus",
             templateUrl: tempateURL,
-            controller: 'GoregoanCampusCtrl'
+            controller: 'GoregaonCampusCtrl'
         })
         .state('jvlr-campus', {
             url: "/jvlr-campus",
