@@ -494,6 +494,9 @@ body {
     margin: auto;
 }
 
+.flex-wrap{
+   @include flex-wrap(wrap);
+}
 .text-number {
     font-size: 65px;
     @extend .font-thin;

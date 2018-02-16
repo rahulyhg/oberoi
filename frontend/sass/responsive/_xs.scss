@@ -35,7 +35,11 @@
          img {
              margin: 0 auto;
          }
-     } //end of about us scss
+     } 
+     .governance-area .profile{
+         padding-right: 0;
+     }
+     //end of about us scss
      //goregaon campus scss
      .profile-data {
          text-align: center;
