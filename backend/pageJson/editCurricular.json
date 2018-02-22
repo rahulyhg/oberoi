@@ -1,0 +1,92 @@
+{
+    "title": "Edit Curricular",
+    "name": "Curricular",
+    "jsonPage": "viewCurricular",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Image",
+            "type": "image",
+            "tableRef": "image",
+            "placeholder": "Enter  Image",
+            "id": "image",
+            "size": "540 x 435",
+            "option": "single",
+            "validation": ["", "trim", ""],
+            "view": true,
+            "url": ""
+        },
+        {
+            "name": "Extra Curricular",
+            "type": "wysiwyg",
+            "tableRef": "extraCurricular",
+            "placeholder": "Enter extraCurricular",
+            "id": "extraCurricular",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+        {
+            "name": "Extra External Vs Internal",
+            "type": "wysiwyg",
+            "tableRef": "externalVsInternal",
+            "placeholder": "Enter External Vs Internal",
+            "id": "externalVsInternal",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+        {
+            "name": "School Or College",
+            "id": "schoolCollege",
+            "type": "tags",
+            "tableRef": "schoolCollege",
+            "placeholder": "Choose Discount Type",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "schoolCollege/search",
+            "view": true,
+            "validation": ["trim"]
+        },
+        {
+            "name": "Module",
+            "id": "Module",
+            "type": "tags",
+            "tableRef": "Module",
+            "placeholder": "Choose Module",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "Module/search",
+            "view": true,
+            "validation": ["trim"]
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitCurricular",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCurricular"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewCurricular"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Curricular/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Curricular/getOne",
+        "params": "_id"
+    }
+}

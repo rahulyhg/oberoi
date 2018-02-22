@@ -1,0 +1,52 @@
+{
+    "title": "Edit Module",
+    "name": "Module",
+    "jsonPage": "viewModule",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Module Name",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "number",
+        "tableRef": "order",
+        "placeholder": "Enter  Order",
+        "id": "order",
+        "validation": ["", "trim", ""],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitModule",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewModule"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewModule"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Module/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Module/getOne",
+        "params": "_id"
+    }
+}

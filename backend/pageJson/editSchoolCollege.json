@@ -1,0 +1,55 @@
+{
+    "title": "Edit SchoolCollege",
+    "name": "SchoolCollege",
+    "jsonPage": "viewSchoolCollege",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter title",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "placeholder": "Enter  Image",
+        "id": "backgroundImage",
+        "size": "",
+        "option": "single",
+        "validation": ["", "trim", ""],
+        "view": true,
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitSchoolCollege",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewSchoolCollege"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewSchoolCollege"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "SchoolCollege/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "SchoolCollege/getOne",
+        "params": "_id"
+    }
+}

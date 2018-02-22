@@ -1,0 +1,79 @@
+{
+    "title": "Edit Atheletics",
+    "name": "Atheletics",
+    "jsonPage": "viewAtheletics",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Name",
+            "type": "text",
+            "tableRef": "name",
+            "placeholder": "Enter Atheletics Name",
+            "id": "name",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Description",
+            "type": "wysiwyg",
+            "tableRef": "description",
+            "placeholder": "Enter description",
+            "id": "description",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+        {
+            "name": "School Or College",
+            "id": "schoolCollege",
+            "type": "tags",
+            "tableRef": "schoolCollege",
+            "placeholder": "Choose Discount Type",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "schoolCollege/search",
+            "view": true,
+            "validation": ["trim"]
+        },
+        {
+            "name": "Module",
+            "id": "Module",
+            "type": "tags",
+            "tableRef": "Module",
+            "placeholder": "Choose Module",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "Module/search",
+            "view": true,
+            "validation": ["trim"]
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitAtheletics",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAtheletics"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAtheletics"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Atheletics/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Atheletics/getOne",
+        "params": "_id"
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "title": "Trip",
+    "description": "List of Trip",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "title"
+        },
+        {
+            "name": "Image",
+            "isSort": "",
+            "type": "image",
+            "tableRef": "image"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editTrip",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Trip",
+        "content": "Are you sure you want to delete Trip?",
+        "api": "Trip/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createTrip"
+    }],
+    "apiCall": {
+        "url": "Trip/search",
+        "params": "_id"
+    }
+}

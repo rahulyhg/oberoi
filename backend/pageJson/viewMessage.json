@@ -1,0 +1,50 @@
+{
+    "title": "Message",
+    "description": "List of Message",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Image",
+        "isSort": "",
+        "type": "image",
+        "tableRef": "image"
+    }, {
+        "name": "Image Title",
+        "isSort": "",
+        "tableRef": "imageTitle"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editMessage",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Message",
+        "content": "Are you sure you want to delete Message?",
+        "api": "Message/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createMessage"
+    }],
+    "apiCall": {
+        "url": "Message/search",
+        "params": "_id"
+    }
+}

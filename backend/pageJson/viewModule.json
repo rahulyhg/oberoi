@@ -1,0 +1,51 @@
+{
+    "title": "Module",
+    "description": "List of Module",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Title",
+            "isSort": "",
+            "tableRef": "name"
+        },
+        {
+            "name": "Order",
+            "isSort": "",
+            "tableRef": "order"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editModule",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Module",
+        "content": "Are you sure you want to delete Module?",
+        "api": "Module/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createModule"
+    }],
+    "apiCall": {
+        "url": "Module/search",
+        "params": "_id"
+    }
+}

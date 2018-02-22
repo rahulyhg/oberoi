@@ -1,0 +1,51 @@
+{
+    "title": "Atheletics",
+    "description": "List of Atheletics",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        },
+        {
+            "name": "Description",
+            "isSort": "",
+            "tableRef": "description"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "fa-pencil",
+        "buttonClass": "btn-primary",
+        "type": "page",
+        "action": "editAtheletics",
+        "fieldsToSend": {
+            "_id": "_id"
+        }
+    }, {
+        "name": "delete",
+        "icon": "fa-trash",
+        "buttonClass": "btn-danger",
+        "type": "apiCallConfirm",
+        "title": "Delete Atheletics",
+        "content": "Are you sure you want to delete Atheletics?",
+        "api": "Atheletics/delete",
+        "fieldsToSend": {
+            "name": "_id",
+            "value": "_id"
+        }
+    }],
+    "button": [{
+        "name": "Create",
+        "icon": "plus",
+        "class": "btn-success",
+        "type": "page",
+        "action": "createAtheletics"
+    }],
+    "apiCall": {
+        "url": "Atheletics/search",
+        "params": "_id"
+    }
+}

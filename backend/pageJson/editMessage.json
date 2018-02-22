@@ -1,0 +1,90 @@
+{
+    "title": "Edit Message",
+    "name": "Message",
+    "jsonPage": "viewMessage",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+            "name": "Description",
+            "type": "wysiwyg",
+            "tableRef": "description",
+            "placeholder": "Enter Message description",
+            "id": "description",
+            "validation": ["", "trim", ""],
+            "url": ""
+        }, {
+            "name": "Image",
+            "type": "image",
+            "tableRef": "image",
+            "placeholder": "Enter  Image",
+            "id": "image",
+            "size": "540 x 435",
+            "option": "single",
+            "validation": ["", "trim", ""],
+            "view": true,
+            "url": ""
+        }, {
+            "name": "Image Title",
+            "type": "text",
+            "tableRef": "imageTitle",
+            "placeholder": "EnterimageTitle",
+            "id": "imageTitle",
+            "validation": ["", "trim", ""],
+            "url": ""
+        },
+        {
+            "name": "School Or College",
+            "id": "schoolCollege",
+            "type": "tags",
+            "tableRef": "schoolCollege",
+            "placeholder": "Choose Discount Type",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "schoolCollege/search",
+            "view": true,
+            "validation": ["trim"]
+        },
+        {
+            "name": "Module",
+            "id": "Module",
+            "type": "tags",
+            "tableRef": "Module",
+            "placeholder": "Choose Module",
+            "dropDownField": "name",
+            "dropDownType": "single",
+            "searchApi": "searchCall",
+            "url": "Module/search",
+            "view": true,
+            "validation": ["trim"]
+        }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitMessage",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewMessage"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewMessage"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Message/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Message/getOne",
+        "params": "_id"
+    }
+}
